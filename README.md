@@ -1,7 +1,7 @@
-# CPS (CardPuter Synth)
+# C.P.S. (Cardputer Synth)
 
 CardputerADV用の自作シンセサイザーアプリです。
-（旧名称: Cardputer-Synth → 他プロジェクトとの名称重複を避けて CPS に変更）
+（旧名称: Cardputer-Synth → 他プロジェクトとの名称重複を避けて C.P.S. に変更）
 
 ## これは何か
 
