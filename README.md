@@ -1,4 +1,4 @@
-# CPS — CardPuter Synth
+# CPS — Cardputer Synth
 
 A feature-rich DIY synthesizer for the **M5Stack CardputerADV**, built with PlatformIO and the Arduino framework.
 
