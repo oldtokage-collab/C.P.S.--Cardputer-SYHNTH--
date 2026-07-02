@@ -1,100 +1,170 @@
-# C.P.S. (Cardputer Synth)
+# CPS — CardPuter Synth
 
-CardputerADV用の自作シンセサイザーアプリです。
-（旧名称: Cardputer-Synth → 他プロジェクトとの名称重複を避けて C.P.S. に変更）
+A feature-rich DIY synthesizer for the **M5Stack CardputerADV**, built with PlatformIO and the Arduino framework.
 
-## これは何か
-
-現時点でできること：
-
-- キーボードの数字キー `1234567890` を押すと、それぞれC4〜E5の音階のサイン波が鳴る
-- 押している間だけ発音（離すと無音）
-- 音はリアルタイムに自前生成（波形テーブル + 位相アキュムレータ方式）
-- `=` キーでオクターブアップ、`-` キーでオクターブダウン（-2〜+2の範囲、押した瞬間に1段階変化）
-- `.` キーで音量アップ、`,` キーで音量ダウン（0〜100%、押した瞬間に5%刻みで変化）
-- IMU(BMI270)の傾きで音色が変化する：
-  - 前後方向に傾けるほど → サイン波→三角波→ノコギリ波→矩形波へなめらかにモーフィング
-  - 左右方向に傾けるほど → ビブラート（音程の微振動）が深くかかる
-- **起動時にSDカードの`/CPS`フォルダを確認し、無ければ自動作成する**
-  （今後、設定ファイルやプリセットの保存先として使う予定）
-
-## 今後実装予定の機能（ロードマップ）
-
-ユーザーからのアイデアをもとに、以下を順次実装予定：
-
-- `Z`キーでベンドダウン、`C`キーでベンドアップ（半音単位で幅を設定可能）
-- `Tab`キーで切り替える3種類のメニュー
-  1. **プレイメニュー** — 演奏用。音階・波形のグラフィカル表示
-  2. **エディットメニュー** — 基本音色の設定（ADSR、可能であればフィルター）
-  3. **設定メニュー** — ベンド幅などの演奏関連設定
-- 上記の設定値をSDカード`/CPS`フォルダ内に保存・読み込み
+> Originally developed with the help of Claude (Anthropic) and shared on Reddit — community feedback was the spark for many of the features below!
 
 ---
 
-## セットアップ手順（VSCode + PlatformIO）
+## Features
 
-1. VSCodeに **PlatformIO IDE** 拡張機能をインストール
-2. このフォルダ（`CPS`）をVSCodeで開く
-   - `File > Open Folder` で `CPS` フォルダを選択
-3. 初回はライブラリのダウンロードが走ります（`M5Cardputer`, `M5Unified`, `M5GFX`）
-4. CardputerADVをUSB-Cで接続
-5. PlatformIOの「Upload」ボタンで書き込み
-   - 書き込みモードに入れない場合：電源スイッチOFF → G0ボタン長押し → 電源ON → ボタンを離す
+| Category | Details |
+|---|---|
+| **Oscillator** | Real-time wavetable synthesis: Sine → Triangle → Sawtooth → Square (morphable) |
+| **Keyboard** | Number keys `1`–`0` mapped to C4–E5; monophonic (last key wins) |
+| **Octave** | `=` / `-` keys shift ±2 octaves |
+| **Volume** | `,` / `.` keys adjust in 5 % steps |
+| **Bend** | `Z` key = bend down, `X` key = bend up — guitar-choke feel with asymmetric attack/release |
+| **ADSR** | Full Attack / Decay / Sustain / Release envelope with retrigger support |
+| **Biquad Filter** | LPF / HPF / BPF / Notch; configurable cutoff (100–8000 Hz) and Q |
+| **Bit-crusher** | Lo-Fi effect: reduces bit depth from 16-bit down to ~3-bit |
+| **Vibrato** | LFO-driven pitch modulation (rate + depth both controllable) |
+| **Tremolo** | LFO-driven volume modulation |
+| **IMU mapping** | BMI270 tilt controls any combination of the parameters above |
+| **SD settings** | All settings auto-saved to `/CPS/settings.json` on Tab → MAIN |
 
-> **注意（フォルダ名変更に伴う移行）**：旧プロジェクト(`cardputer-synth`フォルダ、環境名`cardputer-adv`)とは
-> 別のフォルダ・環境名(`CPS`フォルダ、環境名`cps`)になっています。PlatformIOで開く際は、
-> 新しい`CPS`フォルダの方を開いてください。ビルド出力ディレクトリも
-> `.pio/build/cps/`に変わります。
+### IMU assignable targets
 
----
+`NONE` · `TIMBRE` · `VIBRATO_DEPTH` · `VIBRATO_RATE` · `TREMOLO` · `VOLUME` · `PITCH_BEND` · `BEND_UP` · `BEND_DOWN` · `BITCRUSH` · `FILTER_CUTOFF`
 
-## SDカードについて
-
-- ピン配置（CardputerADV / 無印Cardputer共通、SPI接続）：
-  - SCK = GPIO40
-  - MISO = GPIO39
-  - MOSI = GPIO14
-  - CS = GPIO12
-- FAT32フォーマットのmicroSDカードを挿入してください
-- 起動時に自動で`/CPS`フォルダの存在確認・作成を行います
-- SDカードが無い/読み取れない場合でも、アプリ自体はデフォルト設定で動作します
-  （画面とシリアルモニタの両方に状態が表示されます）
-
-### 動作確認のヒント
-
-画面上の「SD: ...」の行は起動直後だけ表示され、演奏中の動的表示エリアに
-上書きされて消えます。じっくり確認したい場合は、PCとUSB接続した状態で
-シリアルモニタ（115200bps）を開いてください。`[SD] OK - /CPS folder ready`
-のようなログが出力されます。
+- **PITCH_BEND** — bipolar: tilt direction controls bend direction (great for random pitch effects)
+- **BEND_UP / BEND_DOWN** — absolute: tilt amount always raises / lowers pitch
 
 ---
 
-## 動作の仕組み（簡単な解説）
+## Hardware
 
-- `buildWaveTables()` で4種類（サイン・三角・ノコギリ・矩形）の波形テーブルを作成
-- `audioTask()` という別タスク（ESP32-S3のCore 1で動作）が、現在の周波数(`currentFreq`)に応じて
-  波形テーブルを読みながらPCMデータを生成し、`M5Cardputer.Speaker.playRaw()` で再生し続ける
-- `loop()` 側はキーボード・IMUの状態を監視し、各パラメータを更新する
-- 音声生成とキー入力を別タスクに分けているのは、音声生成中に`loop()`がブロックされて
-  キー読み取りが遅延するのを防ぐため
-- `playRaw()` のバッファ境界クリック音対策として、3つのバッファを順番に使うトリプルバッファ方式
-
-### オクターブ・音量キーの判定について
-
-CardputerADVの物理キーマップ上、`+`は独立キーではなく`=`キー＋Shiftの組み合わせです。
-Shiftなしで操作したいという要望に合わせ、**`=`キー（Shiftなし）をオクターブアップ**として
-判定しています。`-` `,` `.`はそれぞれ単独のキーとしてそのまま判定できます。
-
-### IMUの軸が思った方向と違う場合
-
-`updateImu()`関数内では、前後の傾きに`accel.x`、左右の傾きに`accel.y`を使う想定で
-実装していますが、これは実機で確定したものではない「想定」です。実際に傾けてみて、
-軸がズレていると感じたら、`updateImu()`内の`ax`/`ay`の使用箇所を入れ替えてみてください。
-
-### 効果が弱すぎる/強すぎる場合
-
-`TILT_MAX_DEGREES`（感度）、`VIBRATO_MAX_CENTS`（ビブラートの深さ）、
-`MORPH_SMOOTHING`/`VIBRATO_SMOOTHING`（追従の速さ）はすべて調整可能な定数です。
+| Item | Value |
+|---|---|
+| Device | M5Stack CardputerADV |
+| MCU | ESP32-S3 (dual-core Xtensa LX7, 240 MHz) |
+| Audio | ES8311 codec + NS4150B amp, 1 W speaker, 3.5 mm jack |
+| IMU | BMI270 6-axis (CardputerADV only) |
+| SD slot | SPI — SCK=GPIO40, MISO=GPIO39, MOSI=GPIO14, CS=GPIO12 |
 
 ---
 
+## Getting started
+
+### Requirements
+
+- [VSCode](https://code.visualstudio.com/) with the **PlatformIO IDE** extension
+- M5Stack CardputerADV connected via USB-C
+
+### Build & flash
+
+1. Clone or download this repository.
+2. Open the `CPS` folder in VSCode (`File › Open Folder`).
+3. PlatformIO will auto-detect `platformio.ini` and download the required libraries on the first build.
+4. Click **Upload** (→ button in the bottom toolbar).
+
+> **Boot-to-flash mode** (if upload fails): power off → hold G0 → power on → release G0.
+
+### First boot
+
+On first boot the app creates `/CPS/` on the SD card (FAT32 micro-SD required).  
+Settings are saved to `/CPS/settings.json` automatically whenever you leave the SETTING screen.  
+If no SD card is present the app still runs with default settings.
+
+---
+
+## Controls
+
+### MAIN screen
+
+| Key | Action |
+|---|---|
+| `1` – `0` | Play notes C4 – E5 |
+| `=` / `-` | Octave up / down |
+| `,` / `.` | Volume down / up |
+| `Z` | Bend down (hold) |
+| `X` | Bend up (hold) |
+| **Tilt device** | Controls whichever parameters are assigned to X / Y IMU axes |
+| `Tab` | Cycle to EDIT screen |
+
+### EDIT screen (ADSR + Filter)
+
+| Key | Action |
+|---|---|
+| `;` / `.` | Select previous / next item |
+| `,` / `/` | Decrease / increase value |
+| `Tab` | Cycle to SETTING screen |
+
+Items: **Attack · Decay · Sustain · Release · Filter type · Cutoff · Resonance**
+
+### SETTING screen
+
+Same navigation keys as EDIT.
+
+Items: **IMU X axis · IMU Y axis · Bend width · Bend attack speed · Bend release speed**
+
+Leaving SETTING with `Tab` **auto-saves** all settings to the SD card.
+
+---
+
+## Signal path
+
+```
+Oscillator (wavetable morph)
+    │
+    ▼
+Bit-crusher
+    │
+    ▼
+Biquad Filter  ◄── IMU FILTER_CUTOFF offset
+    │
+    ▼
+Volume (key vol + IMU VOLUME offset)
+    │
+    ▼
+Tremolo (LFO × depth)
+    │
+    ▼
+ADSR Envelope
+    │
+    ▼
+Speaker (ES8311 / I2S)
+```
+
+Pitch modulation (vibrato LFO + IMU bend + key bend) is applied to the oscillator phase increment before sample generation.
+
+---
+
+## Project structure
+
+```
+CPS/
+├── platformio.ini      # Build configuration
+└── src/
+    └── main.cpp        # All source code (single-file)
+```
+
+---
+
+## Dependencies
+
+Managed automatically by PlatformIO:
+
+| Library | Version |
+|---|---|
+| `m5stack/M5Cardputer` | ≥ 1.1.1 |
+| `m5stack/M5Unified` | ≥ 0.2.8 |
+| `m5stack/M5GFX` | ≥ 0.2.10 |
+
+`SD` and `SPI` are part of the Arduino-ESP32 core and require no extra entry in `lib_deps`.
+
+---
+
+## Known limitations / future ideas
+
+- Monophonic only (last note wins); polyphony is a potential future addition
+- IMU axis sensitivity is fixed at 1.0; per-axis sensitivity could be added to SETTING
+- Settings are a flat JSON file; a preset system (multiple named slots) could be useful
+- Display is 240×135 px; layout is tight — a larger device variant could show more info
+
+---
+
+## License
+
+MIT — feel free to use, modify, and share.  
+If you build something cool with CPS, consider sharing it with the community!
