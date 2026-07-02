@@ -46,6 +46,22 @@ A feature-rich DIY synthesizer for the **M5Stack CardputerADV**, built with Plat
 
 ## Getting started
 
+### Option 1 — Pre-built binary (easiest, no compiler needed)
+
+If you are running the **Launcher FW** on your CardputerADV, you can install CPS without building anything yourself.
+
+1. Go to the [Releases](../../releases/tag/v0.5c) page and download the latest `C.P.S.v0.5c.bin` file.
+2. Copy the `.bin` file to the **root of your SD card** (not inside a subfolder).
+3. Insert the SD card into your CardputerADV and boot into Launcher FW.
+4. Navigate to the `.bin` file in the Launcher file browser and select it to flash.
+5. CPS will launch automatically after flashing.
+
+> A FAT32-formatted micro-SD card is required both for the Launcher install and for CPS's settings persistence.
+
+---
+
+### Option 2 — Build from source (PlatformIO)
+
 ### Requirements
 
 - [VSCode](https://code.visualstudio.com/) with the **PlatformIO IDE** extension
@@ -60,7 +76,7 @@ A feature-rich DIY synthesizer for the **M5Stack CardputerADV**, built with Plat
 
 > **Boot-to-flash mode** (if upload fails): power off → hold G0 → power on → release G0.
 
-### First boot
+### First boot (both install methods)
 
 On first boot the app creates `/CPS/` on the SD card (FAT32 micro-SD required).  
 Settings are saved to `/CPS/settings.json` automatically whenever you leave the SETTING screen.  
