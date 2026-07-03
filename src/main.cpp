@@ -1,5 +1,5 @@
 /*
- * C.P.S. (Cardputer Synth) - v0.5c
+ * CPS (CardPuter Synth) - v11
  * -------------------------------------------------------
  * A DIY synthesizer app for the M5Stack CardputerADV.
  *
@@ -99,9 +99,11 @@ enum class ImuTarget : uint8_t {
     TARGET_COUNT    // Sentinel - not an actual target
 };
 
-// Forward declaration: defined later in the file, but called by
-// imuXLabel()/imuYLabel() which appear before the definition.
-const char *imuTargetName(ImuTarget t);
+// Forward declarations: these functions are defined later in the file,
+// but are called by code that appears before their definitions.
+const char *imuTargetName(ImuTarget t);      // used by imuXLabel()/imuYLabel()
+void resetParamToDefault(ImuTarget t);        // used by imuXNext()/imuXPrev()/imuYNext()/imuYPrev()
+// Note: filterTypeName() is forward-declared after FilterType enum (below)
 
 // Per-axis configuration
 struct ImuAxisConfig {
@@ -241,6 +243,11 @@ enum class FilterType : uint8_t {
     NOTCH,  // Band-reject: cuts near cutoff (distinctive hollow sound)
 };
 
+// Forward declaration: FilterType is now defined, so this is valid here.
+// filterTypeName() is used by imuTargetName() and loadSettings(),
+// both of which appear before the actual definition of filterTypeName().
+const char *filterTypeName(FilterType t);
+
 struct FilterParams {
     FilterType type      = FilterType::LPF;
     float cutoffHz       = 2000.0f; // Cutoff frequency (Hz)
@@ -347,7 +354,7 @@ bool saveSettings();
 
 // ---- IMU axis X target ----
 void imuXNext() {
-    resetParamToDefault(imuAxisX.target);   // forward-declared below
+    resetParamToDefault(imuAxisX.target);
     uint8_t v = (uint8_t)imuAxisX.target;
     imuAxisX.target = (ImuTarget)((v + 1) % (uint8_t)ImuTarget::TARGET_COUNT);
 }
