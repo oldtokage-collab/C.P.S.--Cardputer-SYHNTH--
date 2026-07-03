@@ -1,5 +1,5 @@
 /*
- * CPS (CardPuter Synth) - v11
+ * C.P.S. (Cardputer Synth) - v0.5c
  * -------------------------------------------------------
  * A DIY synthesizer app for the M5Stack CardputerADV.
  *
