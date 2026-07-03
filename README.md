@@ -1,4 +1,4 @@
-# CPS — Cardputer Synth
+# C.P.S. — CardPuter Synth
 
 A feature-rich DIY synthesizer for the **M5Stack CardputerADV**, built with PlatformIO and the Arduino framework.
 
@@ -50,7 +50,7 @@ A feature-rich DIY synthesizer for the **M5Stack CardputerADV**, built with Plat
 
 If you are running the **Launcher FW** on your CardputerADV, you can install CPS without building anything yourself.
 
-1. Go to the [Releases](../../releases/tag/v0.5c) page and download the latest `C.P.S.v0.5c.bin` file.
+1. Go to the [Releases](../../releases) page and download the latest `C.P.S.v0.5c.bin` file.
 2. Copy the `.bin` file to the **root of your SD card** (not inside a subfolder).
 3. Insert the SD card into your CardputerADV and boot into Launcher FW.
 4. Navigate to the `.bin` file in the Launcher file browser and select it to flash.
@@ -73,6 +73,13 @@ If you are running the **Launcher FW** on your CardputerADV, you can install CPS
 2. Open the `CPS` folder in VSCode (`File › Open Folder`).
 3. PlatformIO will auto-detect `platformio.ini` and download the required libraries on the first build.
 4. Click **Upload** (→ button in the bottom toolbar).
+
+After a successful build, two files are generated in `.pio/build/cps/`:
+
+| File | Purpose |
+|---|---|
+| `firmware.bin` | App binary only — used by PlatformIO's Upload button |
+| `merge.bin` | **Merged** (bootloader + partitions + app) — use this for M5Burner or any single-file flash tool |
 
 > **Boot-to-flash mode** (if upload fails): power off → hold G0 → power on → release G0.
 
