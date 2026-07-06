@@ -1,5 +1,5 @@
 # C.P.S. — CardPuter Synth
-[English](README.md) | [日本語](README.ja.md) |
+[English](README.md) | [日本語](README_ja.md) |
 A feature-rich DIY synthesizer for the **M5Stack CardputerADV**, built with PlatformIO and the Arduino framework.
 
 I share my ideas with Claude and have it write the code.
