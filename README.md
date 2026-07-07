@@ -1,11 +1,12 @@
 # C.P.S. — CardPuter Synth
-[English](README.md) | [日本語](README_ja.md) |
+
+*[日本語版はこちら / Japanese version here](README_ja.md)*
 
 A feature-rich DIY synthesizer for the **M5Stack CardputerADV**, built with PlatformIO and the Arduino framework.
 
 I share my ideas with Claude and have it write the code.
 I share development progress on Reddit and my Twitter account — community feedback has been the spark for many of the features below!
-Thanks to everyone who's shown interest in this project.
+Thank you so much to everyone who's shown interest in this project!
 
 > **This project is currently 100% vibe-coded.**
 > My apologies to anyone who isn't comfortable with AI use or vibe coding.
@@ -49,7 +50,8 @@ v0.7 is a major overhaul of the sound-editing experience.
 | **Bit-crusher** | Lo-Fi effect: reduces bit depth from 16-bit down to ~3-bit |
 | **Vibrato** | LFO-driven pitch modulation (rate + depth adjustable, independent of the general-purpose LFO) |
 | **Tremolo** | LFO-driven volume modulation (independent of the general-purpose LFO) |
-| **Portamento** | ON/OFF, adjustable glide speed |
+| **Portamento** | ON/OFF, adjustable glide speed. When ON, pitch glides smoothly from the previous note to the new one every time a note is played (toggle with `C`) |
+| **Note hold** | When ON, the last note keeps sounding even after you release the key (toggle with `D`) — handy for shaping the tone with the IMU while both hands are free |
 | **IMU mapping** | BMI270 tilt controls assignable parameters; each axis (X/Y) can be held ON/OFF independently |
 | **Patch Bank** | Save/recall every parameter (including IMU mapping and hold state) as a named patch. Rename, duplicate, and delete supported |
 | **SD settings** | Current settings auto-save to `/CPS/settings.json` (when leaving the SETTING screen via Tab) |
@@ -72,6 +74,8 @@ v0.7 is a major overhaul of the sound-editing experience.
 | Audio | ES8311 codec + NS4150B amp, 1 W speaker, 3.5 mm jack |
 | IMU | BMI270 6-axis (CardputerADV only) |
 | SD slot | SPI — SCK=GPIO40, MISO=GPIO39, MOSI=GPIO14, CS=GPIO12 |
+
+> **Regarding the original Cardputer (non-ADV / v1.1)**: the code should work, but I don't have the hardware myself and haven't verified it yet. It also has no IMU sensor, so IMU-based tone control isn't available. In addition, the original's keyboard hardware only supports up to 3 simultaneous key presses — pressing 4 or more keys at once may cause a freeze or crash. Dedicated fallback controls for the original are planned for v0.8.
 
 ---
 
