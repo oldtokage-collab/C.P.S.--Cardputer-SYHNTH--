@@ -1,5 +1,5 @@
 /*
- * C.P.S. (CardPuter Synth) - v0.7o
+ * C.P.S. (CardPuter Synth) - v0.7q
  * -------------------------------------------------------
  * A DIY synthesizer app for the M5Stack CardputerADV.
  *
@@ -1826,7 +1826,9 @@ void drawPlayScreen(bool full){
     if(df>0)M5Cardputer.Display.printf("%-9s",(String(df,1)+"Hz").c_str());
     else    M5Cardputer.Display.print("---      ");
     M5Cardputer.Display.setCursor(4,95);
-    M5Cardputer.Display.printf("O:%+d T:%+d%s",params.octaveShift,transposeSemitones,portaEnabled?"P":"");
+    M5Cardputer.Display.printf("O:%+d T:%+d ",params.octaveShift,transposeSemitones);
+    M5Cardputer.Display.setCursor(4,104);
+    M5Cardputer.Display.printf("P:%-3s H:%-3s",portaEnabled?"ON":"off",noteHeld?"ON":"off");
 
     // Bend meter
     drawBendMeter(params.pitchBendCents+keyBendCurrent,keyBendMaxCents);
@@ -1866,6 +1868,12 @@ void drawPlayScreen(bool full){
     M5Cardputer.Display.setCursor(TX,105);
     M5Cardputer.Display.printf("VOL:%d%% BND:%dst  ",
         (int)(params.keyVolume*100),(int)(keyBendMaxCents/100));
+
+    // Redraw this line last: it spans the full screen width right above the
+    // IMU pad / readout row, and earlier clears in that row (e.g. the IMU
+    // pad's "Y" label clear rect) could otherwise leave a gap in it.
+    M5Cardputer.Display.drawFastHLine(0,55,240,GREEN);
+
     M5Cardputer.Display.endWrite();
 }
 
