@@ -2,10 +2,10 @@
 
 *[日本語版はこちら / Japanese version here](README_ja.md)*
 
-A feature-rich DIY synthesizer for the **M5Stack CardputerADV**, built with PlatformIO and the Arduino framework.
+A feature-rich DIY synthesizer for the **M5Stack Cardputer family** (CardputerADV / original Cardputer), built with PlatformIO and the Arduino framework.
 
 I share my ideas with Claude and have it write the code.
-I share development progress on Reddit and my Twitter account — community feedback has been the spark for many of the features below!
+I share development progress on Reddit and my [Twitter (X) account](https://x.com/Tokagetchi) — community feedback has been the spark for many of the features below!
 Thank you so much to everyone who's shown interest in this project!
 
 > **This project is currently 100% vibe-coded.**
@@ -13,21 +13,34 @@ Thank you so much to everyone who's shown interest in this project!
 
 ---
 
+## 🆕 v0.8 Update
+
+v0.8 is a major overhaul focused on the IMU.
+
+- **SETTING menu redesigned as category launchers**: Patch / IMU(PAD) / Bend / Portamento / Play Mode are now just entry points — selecting one opens its own dedicated screen
+- **Expanded IMU targets to 17** (up from 10 — added PWM/Detune/Noise/SubLevel/Resonance/LFO Rate/LFO Depth). Target selection is now a scrollable list with category divider lines
+- **Added fine per-axis IMU control**: Sensitivity, axis Invert, response Curve (Linear/Exponential), Deadzone, and Calibrate (ON/OFF toggle)
+- **IMU Volume target is now a relative multiplier** of the current volume, so it can no longer exceed the set level
+- **Patch Bank gained Reset and Randomize**: one-tap tone reset or full-parameter randomization, both behind a confirmation dialog
+- **Bend and Portamento each got their own dedicated reset**
+- **Added Play Mode (EZ / Pro)**: EZ Mode is a beginner-friendly diatonic layout, Pro Mode is a full chromatic layout with black keys. Switchable from the SETTING menu
+- **Added original Cardputer support**: devices without an IMU get key-driven "PAD" control instead, auto-detected at boot
+- Extensive investigation and optimization of audio dropouts/stutter, resulting in substantially improved stability
+
+---
+
 ## 🆕 v0.7 Update
 
-v0.7 is a major overhaul of the sound-editing experience.
+v0.7 significantly expanded the sound-editing capabilities.
 
-- **Split the old single EDIT menu into three dedicated screens: VCO / VCF / VCA**, for a much more "real synth" editing feel
+- **Split the EDIT menu into VCO / VCF / VCA screens** (retiring the old single EDIT menu for a more "real synth" editing feel)
 - Added a **sub oscillator** (-1oct / -2oct, adjustable level)
 - Added **noise blend**
 - Added **filter key tracking** (cutoff follows the played pitch)
-- Added a **dedicated filter envelope** (Depth/Attack/Decay/Release) — independent from vibrato and tremolo, this envelope drives the filter cutoff only
-- Added a **general-purpose LFO** as a new tab (Sine/Triangle/Sawtooth/Square, Rate 0.1–20Hz, Depth 0–100%, Target: Pitch/Volume/Timbre/Filter/PWM), fully independent from the existing vibrato and tremolo
+- Added a **dedicated filter envelope** (Depth/Attack/Decay/Release)
+- Added a **general-purpose LFO** as a new tab (Sine/Triangle/Sawtooth/Square, Rate 0.1–20Hz, Depth 0–100%, Target: Pitch/Volume/Timbre/Filter/PWM)
 - Added a **"None" (bypass) filter type**
-- Added a **Patch Bank**: save and recall every parameter — including IMU mapping and hold state — as a named patch. Rename, duplicate, and delete are also supported
-- New tab order: `MAIN → VCO → VCF → VCA → LFO → SETTING`
-- Added **transpose** (`[` / `]` keys, ±12 semitones)
-- Added an at-a-glance indicator for the IMU X/Y axis hold ON/OFF state
+- Added a **Patch Bank**: save/recall every parameter as a named patch, with rename/duplicate/delete
 
 ---
 
@@ -38,30 +51,31 @@ v0.7 is a major overhaul of the sound-editing experience.
 | **Oscillator** | Real-time wavetable synthesis: Sine → Triangle → Sawtooth → Square (morphable), with PWM |
 | **Sub oscillator** | -1oct / -2oct, adjustable level |
 | **Noise** | Noise blend (adjustable level) |
-| **Keyboard** | Number keys `1`–`0` mapped to C4–E5; monophonic (last key wins) |
-| **Octave** | `=` / `-` keys shift ±2 octaves |
-| **Transpose** | `[` / `]` keys shift ±12 semitones (independent of octave) |
-| **Volume** | `,` / `.` keys adjust in 5% steps |
+| **Keyboard (EZ Mode)** | `1234567890-=` + Backspace mapped to a 13-note diatonic scale (C4-A5); monophonic (last key wins) |
+| **Keyboard (Pro Mode)** | Two physical rows, each a complete chromatic octave including black keys (`1234567890-=`+Backspace = C4-C5, `qwertyuiop[]\` = C3-C4) |
+| **Octave** | `;` / `.` keys shift ±2 octaves (`J`/`N` on original Cardputer) |
+| **Transpose** | `,` / `/` keys shift ±12 semitones (`B`/`M` on original Cardputer) |
+| **Volume** | `k` / `l` keys adjust in 5% steps |
 | **Bend** | `Z` key = bend down, `X` key = bend up — guitar-choke feel with asymmetric attack/release |
 | **ADSR** | Full Attack/Decay/Sustain/Release envelope with retrigger support |
-| **Biquad Filter** | LPF / HPF / BPF / Notch / **None (bypass)**; configurable cutoff (100–8000Hz), Q, and key tracking |
+| **Biquad Filter** | LPF / HPF / BPF / Notch / None (bypass); configurable cutoff (100–8000Hz), Q, and key tracking |
 | **Filter envelope** | Dedicated Depth/Attack/Decay/Sustain/Release envelope for the filter cutoff |
 | **General-purpose LFO** | Sine/Triangle/Sawtooth/Square, Rate 0.1–20Hz, Depth 0–100%. Modulates Pitch, Volume, Timbre, Filter, or PWM |
 | **Bit-crusher** | Lo-Fi effect: reduces bit depth from 16-bit down to ~3-bit |
-| **Vibrato** | LFO-driven pitch modulation (rate + depth adjustable, independent of the general-purpose LFO) |
-| **Tremolo** | LFO-driven volume modulation (independent of the general-purpose LFO) |
-| **Portamento** | ON/OFF, adjustable glide speed. When ON, pitch glides smoothly from the previous note to the new one every time a note is played (toggle with `C`) |
-| **Note hold** | When ON, the last note keeps sounding even after you release the key (toggle with `D`) — handy for shaping the tone with the IMU while both hands are free |
-| **IMU mapping** | BMI270 tilt controls assignable parameters; each axis (X/Y) can be held ON/OFF independently |
-| **Patch Bank** | Save/recall every parameter (including IMU mapping and hold state) as a named patch. Rename, duplicate, and delete supported |
+| **Vibrato / Tremolo** | LFO-driven pitch/volume modulation (independent of the general-purpose LFO) |
+| **Portamento** | ON/OFF, adjustable glide speed, with its own dedicated reset |
+| **IMU / PAD mapping** | 17 assignable targets; Sensitivity, axis Invert, response Curve, Deadzone, and Calibration adjustable per axis (Deadzone/Calibration unavailable on original Cardputer) |
+| **Patch Bank** | Save/recall every parameter as a named patch. Rename, duplicate, delete, reset, and randomize supported |
+| **Play Mode** | EZ Mode (diatonic) / Pro Mode (chromatic), switchable from the SETTING menu |
 | **SD settings** | Current settings auto-save to `/CPS/settings.json` (when leaving the SETTING screen via Tab) |
 
-### IMU assignable targets
+### IMU / PAD assignable targets (17)
 
-`NONE` · `TIMBRE` · `VIBRATO_DEPTH` · `VIBRATO_RATE` · `TREMOLO` · `VOLUME` · `PITCH_BEND` · `BEND_UP` · `BEND_DOWN` · `BITCRUSH` · `FILTER_CUTOFF`
+`TIMBRE` · `VIBRATO_DEPTH` · `VIBRATO_RATE` · `TREMOLO` · `VOLUME` · `PITCH_BEND` · `BEND_UP` · `BEND_DOWN` · `BITCRUSH` · `FILTER_CUTOFF` · `PWM` · `DETUNE` · `NOISE` · `SUB_LEVEL` · `RESONANCE` · `LFO_RATE` · `LFO_DEPTH` (+ `NONE`)
 
-- **PITCH_BEND** — bipolar: tilt direction controls bend direction (great for random pitch effects)
-- **BEND_UP / BEND_DOWN** — absolute: tilt amount always raises / lowers pitch
+- **PITCH_BEND** — bipolar: tilt direction (or PAD press direction) controls bend direction
+- **BEND_UP / BEND_DOWN** — absolute: always raises / lowers pitch
+- **VOLUME** — a relative multiplier (0-100%) of the current volume; can only attenuate, never exceeds the set level
 
 ---
 
@@ -69,13 +83,13 @@ v0.7 is a major overhaul of the sound-editing experience.
 
 | Item | Value |
 |---|---|
-| Device | M5Stack CardputerADV |
+| Supported devices | M5Stack CardputerADV, original Cardputer (auto-detected at boot) |
 | MCU | ESP32-S3 (dual-core Xtensa LX7, 240 MHz) |
-| Audio | ES8311 codec + NS4150B amp, 1 W speaker, 3.5 mm jack |
-| IMU | BMI270 6-axis (CardputerADV only) |
+| Audio | ES8311 codec + NS4150B amp (ADV), NS4168+SPM1423 (original), 1 W speaker, 3.5 mm jack |
+| IMU | BMI270 6-axis (**CardputerADV only**) |
 | SD slot | SPI — SCK=GPIO40, MISO=GPIO39, MOSI=GPIO14, CS=GPIO12 |
 
-> **Regarding the original Cardputer (non-ADV / v1.1)**: the code should work, but I don't have the hardware myself and haven't verified it yet. It also has no IMU sensor, so IMU-based tone control isn't available. In addition, the original's keyboard hardware only supports up to 3 simultaneous key presses — pressing 4 or more keys at once may cause a freeze or crash. Dedicated fallback controls for the original are planned for v0.8.
+> **Regarding the original Cardputer (non-ADV / v1.1)**: auto-detected at boot, with key-driven "PAD" control substituting for the missing IMU. I don't have the hardware myself, so I haven't been able to verify this personally yet. Also, the original's keyboard hardware only officially supports **up to 3 simultaneous key presses** — pressing a 4th key at the same time may cause key ghosting (incorrect detection). This is a hardware limitation that can't be fully corrected in software. Bug reports and feedback from original-Cardputer owners are very welcome.
 
 ---
 
@@ -86,7 +100,7 @@ v0.7 is a major overhaul of the sound-editing experience.
 No compiling required — the quickest way to get CPS on your device.
 
 1. Download and install [M5Burner](https://docs.m5stack.com/en/uiflow/M5Burner) from the official site
-2. Connect your M5Stack CardputerADV to your computer via USB-C
+2. Connect your Cardputer (ADV or original) to your computer via USB-C
 3. Search for "C.P.S." (CardPuter Synth) inside M5Burner
 4. Select the correct COM port and click "Burn"
 5. Once flashing completes, CPS will launch automatically
@@ -99,7 +113,7 @@ No compiling required — the quickest way to get CPS on your device.
 
 If your CardputerADV runs **Launcher FW**, you can install CPS without building anything yourself.
 
-1. Go to the [Releases](../../releases) page and download the latest `C.P.S.v0.7o.bin` file
+1. Go to the [Releases](../../releases) page and download the latest `C.P.S.v0.8t.bin` file
 2. Copy the `.bin` file to the **root of your SD card** (not inside a subfolder)
 3. Insert the SD card into your CardputerADV and boot into Launcher FW
 4. Navigate to the `.bin` file in the Launcher file browser and select it to flash
@@ -114,7 +128,7 @@ If your CardputerADV runs **Launcher FW**, you can install CPS without building 
 #### Requirements
 
 - [VSCode](https://code.visualstudio.com/) with the **PlatformIO IDE** extension
-- M5Stack CardputerADV connected via USB-C
+- M5Stack Cardputer (ADV or original) connected via USB-C
 
 #### Build & flash
 
@@ -146,21 +160,21 @@ If no SD card is present the app still runs with default settings.
 
 | Key | Action |
 |---|---|
-| `1` – `0` | Play notes C4 – E5 |
-| `=` / `-` | Octave up / down (±2 octaves) |
-| `[` / `]` | Transpose down / up (±12 semitones) |
-| `,` / `.` | Volume down / up |
+| Note keys | Play notes (layout differs by EZ/Pro Mode — see Features above) |
+| `;` / `.` (ADV), `J`/`N` (original) | Octave up / down (±2 octaves) |
+| `,` / `/` (ADV), `B`/`M` (original) | Transpose down / up (±12 semitones) |
+| `k` / `l` | Volume down / up |
 | `Z` | Bend down (hold) |
 | `X` | Bend up (hold) |
 | `C` | Toggle portamento ON/OFF |
-| `A` | Toggle IMU X-axis hold ON/OFF |
-| `S` | Toggle IMU Y-axis hold ON/OFF |
+| `A` | Toggle IMU/PAD X-axis hold ON/OFF |
+| `S` | Toggle IMU/PAD Y-axis hold ON/OFF |
 | `D` | Toggle note hold ON/OFF |
 | `H` (hold) | Show help overlay |
-| **Tilt device** | Controls whichever parameters are assigned to the X / Y IMU axes |
+| Tilt device (ADV) / `;`/`.`/`,`/`/` for PAD (original) | Controls whichever parameters are assigned to the IMU/PAD X/Y axes |
 | `Tab` | Switch to the VCO screen |
 
-The MAIN screen shows the current note name and frequency, octave/transpose/portamento state, a bend meter, IMU tilt state, and the IMU X/Y target names with their current values — appending **(HOLD)** whenever that axis is held.
+The MAIN screen shows the current note name/frequency, octave/transpose/portamento/note-hold state, a bend meter, IMU/PAD status, and the IMU/PAD X/Y target names with their current values — appending **(HOLD)** whenever that axis is held.
 
 ### VCO screen
 
@@ -182,7 +196,7 @@ Left column: Filter (type) · Cutoff · Resonance · KeyTrack　　Right column:
 | `,` / `/` | Decrease / increase value |
 | `Tab` | Switch to the VCA screen |
 
-Filter type can be set to LPF / HPF / BPF / Notch / **None** (bypass).
+Filter type can be set to LPF / HPF / BPF / Notch / None (bypass).
 
 ### VCA screen (ADSR)
 
@@ -208,17 +222,39 @@ The top of the screen shows the LFO waveform along with a live marker tracking i
 
 ### SETTING screen
 
-Left column: Patch Save · Patch Load · IMU X · IMU Y　　Right column: Bend width · Bend attack speed · Bend release speed · Portamento · Porta speed
+Five entry points: Patch / IMU (PAD on original) / Bend / Portamento / Play Mode.
 
 | Key | Action |
 |---|---|
 | `;` / `.` | Select previous / next item |
-| `,` / `/` | Decrease / increase value, or open the Patch Save/Load screen |
+| `,` / `/` | Open the selected category |
 | `Tab` | Save settings and return to the MAIN screen |
+
+#### Patch sub-menu
+
+Save · Load · Reset (tone reset) · Random (tone randomize). Both Reset and Random are behind a confirmation dialog.
+
+#### IMU / PAD sub-menu
+
+Target · Sensitivity · Invert · Curve · Deadzone (hidden on original Cardputer) per axis, plus Calibrate (ON/OFF toggle, ADV only).
+
+Target selection opens a scrollable picker via `/`, with category divider lines (Pitch/Volume/Timbre/Filter/LFO/Effect); `;`/`.` to scroll, `/` or Enter to confirm.
+
+#### Bend sub-menu
+
+Bend width · attack · release · Reset.
+
+#### Portamento sub-menu
+
+ON/OFF · speed · Reset.
+
+#### Play Mode sub-menu
+
+Toggle between EZ Mode and Pro Mode.
 
 ### Patch Bank screen
 
-Opened from the SETTING screen's "Patch Sv" or "Patch Ld" item by pressing `/` or `,`.
+Opened from the Patch sub-menu's Save or Load item.
 
 | Key | Action |
 |---|---|
@@ -227,9 +263,21 @@ Opened from the SETTING screen's "Patch Sv" or "Patch Ld" item by pressing `/` o
 | `r` | Rename the selected patch |
 | `c` | Duplicate the selected patch |
 | `,` | Delete the selected patch (with confirmation) |
-| `Tab` | Go back one level (name entry → list, list → SETTING screen) |
+| `Tab` | Go back one level |
 
 In Save mode, a `<New Patch>` entry appears at the top of the list for creating a new patch. Patches are only ever saved inside `/CPS/Patch/` — the app cannot navigate to any other folder.
+
+---
+
+## Differences on the original Cardputer
+
+Auto-detected at boot; the following differ from CardputerADV:
+
+- **PAD control instead of IMU**: `;`/`.` move a virtual Y axis, `,`/`/` move a virtual X axis. Moves toward the extreme while held, springs back to center on release (toggle Hold with `A`/`S` to keep it from springing back)
+- **Octave/Transpose keys move**: since PAD control needs those keys, Octave is on `J`/`N` and Transpose is on `B`/`M` instead
+- **Deadzone and Calibrate are hidden**: neither concept applies to a key-driven PAD (no sensor noise to filter, no physical zero-point to correct)
+- **Arpeggiator will not be supported** (planned for a future version): it needs multi-key chord holding, which the original's 3-key rollover limit can't reliably support
+- **3-key rollover limit**: due to hardware constraints, pressing a 4th key at the same time may cause key ghosting
 
 ---
 
@@ -245,10 +293,10 @@ Oscillator (wavetable morph)
 Bit-crusher
     │
     ▼
-Biquad Filter  ◄── Filter envelope / Filter key tracking / IMU / General LFO (Filter)
+Biquad Filter  ◄── Filter envelope / Filter key tracking / IMU(PAD) / General LFO (Filter)
     │
     ▼
-Volume (key vol + IMU volume offset + General LFO (Volume))
+Volume (key vol × IMU(PAD) volume multiplier + General LFO (Volume))
     │
     ▼
 Tremolo (LFO × depth)
@@ -257,11 +305,10 @@ Tremolo (LFO × depth)
 ADSR Envelope
     │
     ▼
-Speaker (ES8311 / I2S)
+Speaker (I2S)
 ```
 
-Pitch modulation (vibrato LFO + IMU bend + key bend + General LFO (Pitch)) is applied to the oscillator phase increment before sample generation.
-The general-purpose LFO's Timbre/PWM targets are applied as a temporary offset to the oscillator's morph value / PWM width (the stored VCO menu values themselves are left unchanged).
+Pitch modulation (vibrato LFO + IMU(PAD) bend + key bend + General LFO (Pitch)) is applied to the oscillator phase increment before sample generation.
 
 ---
 
@@ -270,9 +317,9 @@ The general-purpose LFO's Timbre/PWM targets are applied as a temporary offset t
 ```
 CPS/
 ├── platformio.ini      # Build configuration
-├── merge_bin.py        # Post-build script: generates merge.bin for M5Burner
+├── merge_bin.py         # Post-build script: generates merge.bin for M5Burner
 └── src/
-    └── main.cpp        # All source code (single-file)
+    └── main.cpp          # All source code (single-file)
 ```
 
 ---
@@ -294,9 +341,10 @@ Managed automatically by PlatformIO:
 ## Known limitations / future ideas
 
 - Monophonic only (last note wins); polyphony is not planned
-- IMU axis sensitivity is fixed at 1.0; per-axis sensitivity could be added to SETTING
+- Original Cardputer support hasn't been verified on real hardware by the developer yet (bug reports/feedback welcome)
 - Display is 240×135 px; layout is tight
-- More features planned on the road to v1.0
+- v0.9: Arpeggiator, Step Sequencer (dedicated SEQ tab), and reverse Tab-cycling
+- v1.0: MIDI support (via Unit MIDI) as the headline feature, plus new waveforms, a ring modulator, and an additional filter stage
 
 ---
 
