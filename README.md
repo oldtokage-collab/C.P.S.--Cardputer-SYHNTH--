@@ -343,8 +343,8 @@ Managed automatically by PlatformIO:
 - Monophonic only (last note wins); polyphony is not planned
 - Original Cardputer support hasn't been verified on real hardware by the developer yet (bug reports/feedback welcome)
 - Display is 240×135 px; layout is tight
-- v0.9: Arpeggiator, Step Sequencer (dedicated SEQ tab), and reverse Tab-cycling
-- v1.0: MIDI support (via Unit MIDI) as the headline feature, plus new waveforms, a ring modulator, and an additional filter stage
+- v0.9: Arpeggiator, Sand reverse Tab-cycling
+- v1.0: A ring modulator, and an additional filter stage
 
 ---
 
