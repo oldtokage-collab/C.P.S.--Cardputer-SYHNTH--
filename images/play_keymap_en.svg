@@ -1,0 +1,212 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="490" height="412" viewBox="0 0 490 412" font-family="Verdana, Arial, sans-serif">
+<rect x="0" y="0" width="490" height="412" fill="#1b1b1b"/>
+<text x="245.0" y="12" text-anchor="middle" font-size="11" fill="#8fd6ff" font-weight="bold">PLAY Mode Keymap (CardputerADV)</text>
+<rect x="14.0" y="22" width="31.0" height="31" rx="4" fill="#333333" stroke="#555555" stroke-width="1.2"/>
+<text x="29.5" y="40.5" text-anchor="middle" font-size="8.5" fill="#777777">esc</text>
+<rect x="48.0" y="22" width="31.0" height="31" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="63.5" y="40.5" text-anchor="middle" font-size="8.5" fill="#ffffff">1</text>
+<rect x="82.0" y="22" width="31.0" height="31" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="97.5" y="40.5" text-anchor="middle" font-size="8.5" fill="#ffffff">2</text>
+<rect x="116.0" y="22" width="31.0" height="31" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="131.5" y="40.5" text-anchor="middle" font-size="8.5" fill="#ffffff">3</text>
+<rect x="150.0" y="22" width="31.0" height="31" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="165.5" y="40.5" text-anchor="middle" font-size="8.5" fill="#ffffff">4</text>
+<rect x="184.0" y="22" width="31.0" height="31" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="199.5" y="40.5" text-anchor="middle" font-size="8.5" fill="#ffffff">5</text>
+<rect x="218.0" y="22" width="31.0" height="31" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="233.5" y="40.5" text-anchor="middle" font-size="8.5" fill="#ffffff">6</text>
+<rect x="252.0" y="22" width="31.0" height="31" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="267.5" y="40.5" text-anchor="middle" font-size="8.5" fill="#ffffff">7</text>
+<rect x="286.0" y="22" width="31.0" height="31" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="301.5" y="40.5" text-anchor="middle" font-size="8.5" fill="#ffffff">8</text>
+<rect x="320.0" y="22" width="31.0" height="31" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="335.5" y="40.5" text-anchor="middle" font-size="8.5" fill="#ffffff">9</text>
+<rect x="354.0" y="22" width="31.0" height="31" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="369.5" y="40.5" text-anchor="middle" font-size="8.5" fill="#ffffff">0</text>
+<rect x="388.0" y="22" width="31.0" height="31" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="403.5" y="40.5" text-anchor="middle" font-size="8.5" fill="#ffffff">-</text>
+<rect x="422.0" y="22" width="31.0" height="31" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="437.5" y="40.5" text-anchor="middle" font-size="8.5" fill="#ffffff">=</text>
+<rect x="456.0" y="22" width="31.0" height="31" rx="4" fill="#333333" stroke="#555555" stroke-width="1.2"/>
+<text x="471.5" y="40.5" text-anchor="middle" font-size="8.5" fill="#777777">del</text>
+<rect x="14.0" y="58" width="31.0" height="31" rx="4" fill="#6a3f8a" stroke="#c090e0" stroke-width="1.2"/>
+<text x="29.5" y="76.5" text-anchor="middle" font-size="8.5" fill="#ffffff">tab</text>
+<circle cx="37.0" cy="66.0" r="7" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="37.0" y="68.7" text-anchor="middle" font-size="7.5" fill="#1b1b1b" font-weight="bold">16</text>
+<rect x="48.0" y="58" width="31.0" height="31" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="63.5" y="76.5" text-anchor="middle" font-size="8.5" fill="#ffffff">q</text>
+<rect x="82.0" y="58" width="31.0" height="31" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="97.5" y="76.5" text-anchor="middle" font-size="8.5" fill="#ffffff">w</text>
+<rect x="116.0" y="58" width="31.0" height="31" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="131.5" y="76.5" text-anchor="middle" font-size="8.5" fill="#ffffff">e</text>
+<rect x="150.0" y="58" width="31.0" height="31" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="165.5" y="76.5" text-anchor="middle" font-size="8.5" fill="#ffffff">r</text>
+<rect x="184.0" y="58" width="31.0" height="31" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="199.5" y="76.5" text-anchor="middle" font-size="8.5" fill="#ffffff">t</text>
+<rect x="218.0" y="58" width="31.0" height="31" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="233.5" y="76.5" text-anchor="middle" font-size="8.5" fill="#ffffff">y</text>
+<rect x="252.0" y="58" width="31.0" height="31" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="267.5" y="76.5" text-anchor="middle" font-size="8.5" fill="#ffffff">u</text>
+<rect x="286.0" y="58" width="31.0" height="31" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="301.5" y="76.5" text-anchor="middle" font-size="8.5" fill="#ffffff">i</text>
+<rect x="320.0" y="58" width="31.0" height="31" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="335.5" y="76.5" text-anchor="middle" font-size="8.5" fill="#ffffff">o</text>
+<rect x="354.0" y="58" width="31.0" height="31" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="369.5" y="76.5" text-anchor="middle" font-size="8.5" fill="#ffffff">p</text>
+<rect x="388.0" y="58" width="31.0" height="31" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="403.5" y="76.5" text-anchor="middle" font-size="8.5" fill="#ffffff">[</text>
+<rect x="422.0" y="58" width="31.0" height="31" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="437.5" y="76.5" text-anchor="middle" font-size="8.5" fill="#ffffff">]</text>
+<rect x="456.0" y="58" width="31.0" height="31" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="471.5" y="76.5" text-anchor="middle" font-size="8.5" fill="#ffffff">\</text>
+<rect x="14.0" y="94" width="31.0" height="31" rx="4" fill="#333333" stroke="#555555" stroke-width="1.2"/>
+<text x="29.5" y="112.5" text-anchor="middle" font-size="8.5" fill="#777777">fn</text>
+<rect x="48.0" y="94" width="31.0" height="31" rx="4" fill="#6a3f8a" stroke="#c090e0" stroke-width="1.2"/>
+<text x="63.5" y="112.5" text-anchor="middle" font-size="8.5" fill="#ffffff">Aa</text>
+<circle cx="71.0" cy="102.0" r="7" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="71.0" y="104.7" text-anchor="middle" font-size="7.5" fill="#1b1b1b" font-weight="bold">14</text>
+<rect x="82.0" y="94" width="31.0" height="31" rx="4" fill="#8a5a1f" stroke="#e0a050" stroke-width="1.2"/>
+<text x="97.5" y="112.5" text-anchor="middle" font-size="8.5" fill="#ffffff">a</text>
+<circle cx="105.0" cy="102.0" r="7" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="105.0" y="104.7" text-anchor="middle" font-size="7.5" fill="#1b1b1b" font-weight="bold">10</text>
+<rect x="116.0" y="94" width="31.0" height="31" rx="4" fill="#8a5a1f" stroke="#e0a050" stroke-width="1.2"/>
+<text x="131.5" y="112.5" text-anchor="middle" font-size="8.5" fill="#ffffff">s</text>
+<circle cx="139.0" cy="102.0" r="7" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="139.0" y="104.7" text-anchor="middle" font-size="7.5" fill="#1b1b1b" font-weight="bold">11</text>
+<rect x="150.0" y="94" width="31.0" height="31" rx="4" fill="#8a5a1f" stroke="#e0a050" stroke-width="1.2"/>
+<text x="165.5" y="112.5" text-anchor="middle" font-size="8.5" fill="#ffffff">d</text>
+<circle cx="173.0" cy="102.0" r="7" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="173.0" y="104.7" text-anchor="middle" font-size="7.5" fill="#1b1b1b" font-weight="bold">12</text>
+<rect x="184.0" y="94" width="31.0" height="31" rx="4" fill="#333333" stroke="#555555" stroke-width="1.2"/>
+<text x="199.5" y="112.5" text-anchor="middle" font-size="8.5" fill="#777777">f</text>
+<rect x="218.0" y="94" width="31.0" height="31" rx="4" fill="#333333" stroke="#555555" stroke-width="1.2"/>
+<text x="233.5" y="112.5" text-anchor="middle" font-size="8.5" fill="#777777">g</text>
+<rect x="252.0" y="94" width="31.0" height="31" rx="4" fill="#6a3f8a" stroke="#c090e0" stroke-width="1.2"/>
+<text x="267.5" y="112.5" text-anchor="middle" font-size="8.5" fill="#ffffff">h</text>
+<circle cx="275.0" cy="102.0" r="7" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="275.0" y="104.7" text-anchor="middle" font-size="7.5" fill="#1b1b1b" font-weight="bold">15</text>
+<rect x="286.0" y="94" width="31.0" height="31" rx="4" fill="#333333" stroke="#555555" stroke-width="1.2"/>
+<text x="301.5" y="112.5" text-anchor="middle" font-size="8.5" fill="#777777">j</text>
+<rect x="320.0" y="94" width="31.0" height="31" rx="4" fill="#3f7a3f" stroke="#6fcf6f" stroke-width="1.2"/>
+<text x="335.5" y="112.5" text-anchor="middle" font-size="8.5" fill="#ffffff">k</text>
+<circle cx="343.0" cy="102.0" r="7" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="343.0" y="104.7" text-anchor="middle" font-size="7.5" fill="#1b1b1b" font-weight="bold">5</text>
+<rect x="354.0" y="94" width="31.0" height="31" rx="4" fill="#3f7a3f" stroke="#6fcf6f" stroke-width="1.2"/>
+<text x="369.5" y="112.5" text-anchor="middle" font-size="8.5" fill="#ffffff">l</text>
+<circle cx="377.0" cy="102.0" r="7" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="377.0" y="104.7" text-anchor="middle" font-size="7.5" fill="#1b1b1b" font-weight="bold">6</text>
+<rect x="388.0" y="94" width="31.0" height="31" rx="4" fill="#3f7a3f" stroke="#6fcf6f" stroke-width="1.2"/>
+<text x="403.5" y="112.5" text-anchor="middle" font-size="8.5" fill="#ffffff">;</text>
+<circle cx="411.0" cy="102.0" r="7" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="411.0" y="104.7" text-anchor="middle" font-size="7.5" fill="#1b1b1b" font-weight="bold">1</text>
+<rect x="422.0" y="94" width="31.0" height="31" rx="4" fill="#333333" stroke="#555555" stroke-width="1.2"/>
+<text x="437.5" y="112.5" text-anchor="middle" font-size="8.5" fill="#777777">&#x27;</text>
+<rect x="456.0" y="94" width="31.0" height="31" rx="4" fill="#333333" stroke="#555555" stroke-width="1.2"/>
+<text x="471.5" y="112.5" text-anchor="middle" font-size="8.5" fill="#777777">ok</text>
+<rect x="14.0" y="130" width="31.0" height="31" rx="4" fill="#333333" stroke="#555555" stroke-width="1.2"/>
+<text x="29.5" y="148.5" text-anchor="middle" font-size="6.3" fill="#777777">ctrl</text>
+<rect x="48.0" y="130" width="31.0" height="31" rx="4" fill="#333333" stroke="#555555" stroke-width="1.2"/>
+<text x="63.5" y="148.5" text-anchor="middle" font-size="8.5" fill="#777777">opt</text>
+<rect x="82.0" y="130" width="31.0" height="31" rx="4" fill="#333333" stroke="#555555" stroke-width="1.2"/>
+<text x="97.5" y="148.5" text-anchor="middle" font-size="8.5" fill="#777777">alt</text>
+<rect x="116.0" y="130" width="31.0" height="31" rx="4" fill="#8a5a1f" stroke="#e0a050" stroke-width="1.2"/>
+<text x="131.5" y="148.5" text-anchor="middle" font-size="8.5" fill="#ffffff">z</text>
+<circle cx="139.0" cy="138.0" r="7" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="139.0" y="140.7" text-anchor="middle" font-size="7.5" fill="#1b1b1b" font-weight="bold">7</text>
+<rect x="150.0" y="130" width="31.0" height="31" rx="4" fill="#8a5a1f" stroke="#e0a050" stroke-width="1.2"/>
+<text x="165.5" y="148.5" text-anchor="middle" font-size="8.5" fill="#ffffff">x</text>
+<circle cx="173.0" cy="138.0" r="7" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="173.0" y="140.7" text-anchor="middle" font-size="7.5" fill="#1b1b1b" font-weight="bold">8</text>
+<rect x="184.0" y="130" width="31.0" height="31" rx="4" fill="#8a5a1f" stroke="#e0a050" stroke-width="1.2"/>
+<text x="199.5" y="148.5" text-anchor="middle" font-size="8.5" fill="#ffffff">c</text>
+<circle cx="207.0" cy="138.0" r="7" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="207.0" y="140.7" text-anchor="middle" font-size="7.5" fill="#1b1b1b" font-weight="bold">9</text>
+<rect x="218.0" y="130" width="31.0" height="31" rx="4" fill="#8a5a1f" stroke="#e0a050" stroke-width="1.2"/>
+<text x="233.5" y="148.5" text-anchor="middle" font-size="8.5" fill="#ffffff">v</text>
+<circle cx="241.0" cy="138.0" r="7" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="241.0" y="140.7" text-anchor="middle" font-size="7.5" fill="#1b1b1b" font-weight="bold">13</text>
+<rect x="252.0" y="130" width="31.0" height="31" rx="4" fill="#333333" stroke="#555555" stroke-width="1.2"/>
+<text x="267.5" y="148.5" text-anchor="middle" font-size="8.5" fill="#777777">b</text>
+<rect x="286.0" y="130" width="31.0" height="31" rx="4" fill="#333333" stroke="#555555" stroke-width="1.2"/>
+<text x="301.5" y="148.5" text-anchor="middle" font-size="8.5" fill="#777777">n</text>
+<rect x="320.0" y="130" width="31.0" height="31" rx="4" fill="#333333" stroke="#555555" stroke-width="1.2"/>
+<text x="335.5" y="148.5" text-anchor="middle" font-size="8.5" fill="#777777">m</text>
+<rect x="354.0" y="130" width="31.0" height="31" rx="4" fill="#3f7a3f" stroke="#6fcf6f" stroke-width="1.2"/>
+<text x="369.5" y="148.5" text-anchor="middle" font-size="8.5" fill="#ffffff">,</text>
+<circle cx="377.0" cy="138.0" r="7" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="377.0" y="140.7" text-anchor="middle" font-size="7.5" fill="#1b1b1b" font-weight="bold">3</text>
+<rect x="388.0" y="130" width="31.0" height="31" rx="4" fill="#3f7a3f" stroke="#6fcf6f" stroke-width="1.2"/>
+<text x="403.5" y="148.5" text-anchor="middle" font-size="8.5" fill="#ffffff">.</text>
+<circle cx="411.0" cy="138.0" r="7" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="411.0" y="140.7" text-anchor="middle" font-size="7.5" fill="#1b1b1b" font-weight="bold">2</text>
+<rect x="422.0" y="130" width="31.0" height="31" rx="4" fill="#3f7a3f" stroke="#6fcf6f" stroke-width="1.2"/>
+<text x="437.5" y="148.5" text-anchor="middle" font-size="8.5" fill="#ffffff">/</text>
+<circle cx="445.0" cy="138.0" r="7" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="445.0" y="140.7" text-anchor="middle" font-size="7.5" fill="#1b1b1b" font-weight="bold">4</text>
+<rect x="456.0" y="130" width="31.0" height="31" rx="4" fill="#6a3f8a" stroke="#c090e0" stroke-width="1.2"/>
+<text x="471.5" y="148.5" text-anchor="middle" font-size="6.3" fill="#ffffff">space</text>
+<circle cx="479.0" cy="138.0" r="7" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="479.0" y="140.7" text-anchor="middle" font-size="7.5" fill="#1b1b1b" font-weight="bold">17</text>
+<text x="14" y="172" font-size="9" fill="#aaaaaa">Note key layout differs between EZ Mode and Pro Mode -- see the main text.</text>
+<text x="14" y="194" font-size="9.5" fill="#8fd6ff" font-weight="bold">凡例 / Legend</text>
+<rect x="14.0" y="205" width="12" height="12" rx="2" fill="#2f5f8f" stroke="#888" stroke-width="1"/>
+<text x="30.0" y="214" font-size="8.5" fill="#dddddd">Note keys</text>
+<rect x="14.0" y="221" width="12" height="12" rx="2" fill="#3f7a3f" stroke="#888" stroke-width="1"/>
+<text x="30.0" y="230" font-size="8.5" fill="#dddddd">Adjust (Octave/Transpose/Volume)</text>
+<rect x="14.0" y="237" width="12" height="12" rx="2" fill="#8a5a1f" stroke="#888" stroke-width="1"/>
+<text x="30.0" y="246" font-size="8.5" fill="#dddddd">Toggle (Bend/Porta/Hold/Latch)</text>
+<rect x="14.0" y="253" width="12" height="12" rx="2" fill="#6a3f8a" stroke="#888" stroke-width="1"/>
+<text x="30.0" y="262" font-size="8.5" fill="#dddddd">Special (Shift/Help/Tab/Space)</text>
+<circle cx="20.0" cy="275" r="6" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="20.0" y="277.5" text-anchor="middle" font-size="6.5" fill="#1b1b1b" font-weight="bold">1</text>
+<text x="30.0" y="278" font-size="8.5" fill="#dddddd">Octave up</text>
+<circle cx="20.0" cy="291" r="6" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="20.0" y="293.5" text-anchor="middle" font-size="6.5" fill="#1b1b1b" font-weight="bold">2</text>
+<text x="30.0" y="294" font-size="8.5" fill="#dddddd">Octave down</text>
+<circle cx="20.0" cy="307" r="6" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="20.0" y="309.5" text-anchor="middle" font-size="6.5" fill="#1b1b1b" font-weight="bold">3</text>
+<text x="30.0" y="310" font-size="8.5" fill="#dddddd">Transpose down</text>
+<circle cx="20.0" cy="323" r="6" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="20.0" y="325.5" text-anchor="middle" font-size="6.5" fill="#1b1b1b" font-weight="bold">4</text>
+<text x="30.0" y="326" font-size="8.5" fill="#dddddd">Transpose up</text>
+<circle cx="20.0" cy="339" r="6" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="20.0" y="341.5" text-anchor="middle" font-size="6.5" fill="#1b1b1b" font-weight="bold">5</text>
+<text x="30.0" y="342" font-size="8.5" fill="#dddddd">Volume down</text>
+<circle cx="20.0" cy="355" r="6" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="20.0" y="357.5" text-anchor="middle" font-size="6.5" fill="#1b1b1b" font-weight="bold">6</text>
+<text x="30.0" y="358" font-size="8.5" fill="#dddddd">Volume up</text>
+<circle cx="20.0" cy="371" r="6" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="20.0" y="373.5" text-anchor="middle" font-size="6.5" fill="#1b1b1b" font-weight="bold">7</text>
+<text x="30.0" y="374" font-size="8.5" fill="#dddddd">Bend down (hold)</text>
+<circle cx="251.0" cy="211" r="6" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="251.0" y="213.5" text-anchor="middle" font-size="6.5" fill="#1b1b1b" font-weight="bold">8</text>
+<text x="261.0" y="214" font-size="8.5" fill="#dddddd">Bend up (hold)</text>
+<circle cx="251.0" cy="227" r="6" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="251.0" y="229.5" text-anchor="middle" font-size="6.5" fill="#1b1b1b" font-weight="bold">9</text>
+<text x="261.0" y="230" font-size="8.5" fill="#dddddd">Toggle Portamento</text>
+<circle cx="251.0" cy="243" r="6" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="251.0" y="245.5" text-anchor="middle" font-size="6.5" fill="#1b1b1b" font-weight="bold">10</text>
+<text x="261.0" y="246" font-size="8.5" fill="#dddddd">Toggle IMU X-axis hold</text>
+<circle cx="251.0" cy="259" r="6" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="251.0" y="261.5" text-anchor="middle" font-size="6.5" fill="#1b1b1b" font-weight="bold">11</text>
+<text x="261.0" y="262" font-size="8.5" fill="#dddddd">Toggle IMU Y-axis hold</text>
+<circle cx="251.0" cy="275" r="6" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="251.0" y="277.5" text-anchor="middle" font-size="6.5" fill="#1b1b1b" font-weight="bold">12</text>
+<text x="261.0" y="278" font-size="8.5" fill="#dddddd">Toggle Note Hold</text>
+<circle cx="251.0" cy="291" r="6" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="251.0" y="293.5" text-anchor="middle" font-size="6.5" fill="#1b1b1b" font-weight="bold">13</text>
+<text x="261.0" y="294" font-size="8.5" fill="#dddddd">Arp Latch (ADV only)</text>
+<circle cx="251.0" cy="307" r="6" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="251.0" y="309.5" text-anchor="middle" font-size="6.5" fill="#1b1b1b" font-weight="bold">14</text>
+<text x="261.0" y="310" font-size="8.5" fill="#dddddd">Shift (Shift+V: Arp On/Off, etc.)</text>
+<circle cx="251.0" cy="323" r="6" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="251.0" y="325.5" text-anchor="middle" font-size="6.5" fill="#1b1b1b" font-weight="bold">15</text>
+<text x="261.0" y="326" font-size="8.5" fill="#dddddd">Show Help (hold)</text>
+<circle cx="251.0" cy="339" r="6" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="251.0" y="341.5" text-anchor="middle" font-size="6.5" fill="#1b1b1b" font-weight="bold">16</text>
+<text x="261.0" y="342" font-size="8.5" fill="#dddddd">Tab: next menu / Shift+Tab: previous</text>
+<circle cx="251.0" cy="355" r="6" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="251.0" y="357.5" text-anchor="middle" font-size="6.5" fill="#1b1b1b" font-weight="bold">17</text>
+<text x="261.0" y="358" font-size="8.5" fill="#dddddd">Space: Sequencer Play/Stop</text>
+<text x="14" y="404" font-size="8" fill="#888888">G0 button (short press): PLAY&lt;-&gt;SEQ / G0 (long press): enter Song mode -- not on the keyboard</text>
+</svg>

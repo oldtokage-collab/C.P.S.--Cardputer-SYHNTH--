@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="572" height="351" viewBox="0 0 572 351" font-family="Verdana, Arial, sans-serif">
+<rect x="0" y="0" width="572" height="351" fill="#1b1b1b"/>
+<text x="286.0" y="12" text-anchor="middle" font-size="11" fill="#8fd6ff" font-weight="bold">SEQ モード キー配置図 (CardputerADV)</text>
+<rect x="14.0" y="22" width="31.0" height="30" rx="4" fill="#333333" stroke="#555555" stroke-width="1.2"/>
+<text x="29.5" y="40.0" text-anchor="middle" font-size="9" fill="#777777">esc</text>
+<rect x="48.0" y="22" width="31.0" height="30" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="63.5" y="40.0" text-anchor="middle" font-size="9" fill="#ffffff">1</text>
+<rect x="82.0" y="22" width="31.0" height="30" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="97.5" y="40.0" text-anchor="middle" font-size="9" fill="#ffffff">2</text>
+<rect x="116.0" y="22" width="31.0" height="30" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="131.5" y="40.0" text-anchor="middle" font-size="9" fill="#ffffff">3</text>
+<rect x="150.0" y="22" width="31.0" height="30" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="165.5" y="40.0" text-anchor="middle" font-size="9" fill="#ffffff">4</text>
+<rect x="184.0" y="22" width="31.0" height="30" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="199.5" y="40.0" text-anchor="middle" font-size="9" fill="#ffffff">5</text>
+<rect x="218.0" y="22" width="31.0" height="30" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="233.5" y="40.0" text-anchor="middle" font-size="9" fill="#ffffff">6</text>
+<rect x="252.0" y="22" width="31.0" height="30" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="267.5" y="40.0" text-anchor="middle" font-size="9" fill="#ffffff">7</text>
+<rect x="286.0" y="22" width="31.0" height="30" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="301.5" y="40.0" text-anchor="middle" font-size="9" fill="#ffffff">8</text>
+<rect x="320.0" y="22" width="31.0" height="30" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="335.5" y="40.0" text-anchor="middle" font-size="9" fill="#ffffff">9</text>
+<rect x="354.0" y="22" width="31.0" height="30" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="369.5" y="40.0" text-anchor="middle" font-size="9" fill="#ffffff">0</text>
+<rect x="388.0" y="22" width="31.0" height="30" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="403.5" y="40.0" text-anchor="middle" font-size="9" fill="#ffffff">-</text>
+<rect x="422.0" y="22" width="31.0" height="30" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="437.5" y="40.0" text-anchor="middle" font-size="9" fill="#ffffff">=</text>
+<rect x="456.0" y="22" width="48.0" height="30" rx="4" fill="#8a5a1f" stroke="#e0a050" stroke-width="1.2"/>
+<text x="480.0" y="40.0" text-anchor="middle" font-size="9" fill="#ffffff">del</text>
+<circle cx="496.0" cy="30.0" r="7" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="496.0" y="32.7" text-anchor="middle" font-size="7.5" fill="#1b1b1b" font-weight="bold">6</text>
+<rect x="14.0" y="57" width="48.0" height="30" rx="4" fill="#333333" stroke="#555555" stroke-width="1.2"/>
+<text x="38.0" y="75.0" text-anchor="middle" font-size="9" fill="#777777">tab</text>
+<rect x="65.0" y="57" width="31.0" height="30" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="80.5" y="75.0" text-anchor="middle" font-size="9" fill="#ffffff">q</text>
+<rect x="99.0" y="57" width="31.0" height="30" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="114.5" y="75.0" text-anchor="middle" font-size="9" fill="#ffffff">w</text>
+<rect x="133.0" y="57" width="31.0" height="30" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="148.5" y="75.0" text-anchor="middle" font-size="9" fill="#ffffff">e</text>
+<rect x="167.0" y="57" width="31.0" height="30" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="182.5" y="75.0" text-anchor="middle" font-size="9" fill="#ffffff">r</text>
+<rect x="201.0" y="57" width="31.0" height="30" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="216.5" y="75.0" text-anchor="middle" font-size="9" fill="#ffffff">t</text>
+<rect x="235.0" y="57" width="31.0" height="30" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="250.5" y="75.0" text-anchor="middle" font-size="9" fill="#ffffff">y</text>
+<rect x="269.0" y="57" width="31.0" height="30" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="284.5" y="75.0" text-anchor="middle" font-size="9" fill="#ffffff">u</text>
+<rect x="303.0" y="57" width="31.0" height="30" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="318.5" y="75.0" text-anchor="middle" font-size="9" fill="#ffffff">i</text>
+<rect x="337.0" y="57" width="31.0" height="30" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="352.5" y="75.0" text-anchor="middle" font-size="9" fill="#ffffff">o</text>
+<rect x="371.0" y="57" width="31.0" height="30" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="386.5" y="75.0" text-anchor="middle" font-size="9" fill="#ffffff">p</text>
+<rect x="405.0" y="57" width="31.0" height="30" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="420.5" y="75.0" text-anchor="middle" font-size="9" fill="#ffffff">[</text>
+<rect x="439.0" y="57" width="31.0" height="30" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="454.5" y="75.0" text-anchor="middle" font-size="9" fill="#ffffff">]</text>
+<rect x="473.0" y="57" width="31.0" height="30" rx="4" fill="#2f5f8f" stroke="#5fa8e0" stroke-width="1.2"/>
+<text x="488.5" y="75.0" text-anchor="middle" font-size="9" fill="#ffffff">\</text>
+<rect x="14.0" y="92" width="31.0" height="30" rx="4" fill="#333333" stroke="#555555" stroke-width="1.2"/>
+<text x="29.5" y="110.0" text-anchor="middle" font-size="9" fill="#777777">fn</text>
+<rect x="48.0" y="92" width="31.0" height="30" rx="4" fill="#6a3f8a" stroke="#c090e0" stroke-width="1.2"/>
+<text x="63.5" y="110.0" text-anchor="middle" font-size="9" fill="#ffffff">Aa</text>
+<circle cx="71.0" cy="100.0" r="7" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="71.0" y="102.7" text-anchor="middle" font-size="7.5" fill="#1b1b1b" font-weight="bold">8</text>
+<rect x="82.0" y="92" width="31.0" height="30" rx="4" fill="#333333" stroke="#555555" stroke-width="1.2"/>
+<text x="97.5" y="110.0" text-anchor="middle" font-size="9" fill="#777777">a</text>
+<rect x="116.0" y="92" width="31.0" height="30" rx="4" fill="#333333" stroke="#555555" stroke-width="1.2"/>
+<text x="131.5" y="110.0" text-anchor="middle" font-size="9" fill="#777777">s</text>
+<rect x="150.0" y="92" width="31.0" height="30" rx="4" fill="#333333" stroke="#555555" stroke-width="1.2"/>
+<text x="165.5" y="110.0" text-anchor="middle" font-size="9" fill="#777777">d</text>
+<rect x="184.0" y="92" width="31.0" height="30" rx="4" fill="#a03050" stroke="#e07090" stroke-width="1.2"/>
+<text x="199.5" y="110.0" text-anchor="middle" font-size="9" fill="#ffffff">f</text>
+<circle cx="207.0" cy="100.0" r="7" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="207.0" y="102.7" text-anchor="middle" font-size="7.5" fill="#1b1b1b" font-weight="bold">5</text>
+<rect x="218.0" y="92" width="31.0" height="30" rx="4" fill="#a03050" stroke="#e07090" stroke-width="1.2"/>
+<text x="233.5" y="110.0" text-anchor="middle" font-size="9" fill="#ffffff">g</text>
+<circle cx="241.0" cy="100.0" r="7" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="241.0" y="102.7" text-anchor="middle" font-size="7.5" fill="#1b1b1b" font-weight="bold">4</text>
+<rect x="252.0" y="92" width="31.0" height="30" rx="4" fill="#6a3f8a" stroke="#c090e0" stroke-width="1.2"/>
+<text x="267.5" y="110.0" text-anchor="middle" font-size="9" fill="#ffffff">h</text>
+<circle cx="275.0" cy="100.0" r="7" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="275.0" y="102.7" text-anchor="middle" font-size="7.5" fill="#1b1b1b" font-weight="bold">14</text>
+<rect x="286.0" y="92" width="31.0" height="30" rx="4" fill="#333333" stroke="#555555" stroke-width="1.2"/>
+<text x="301.5" y="110.0" text-anchor="middle" font-size="9" fill="#777777">j</text>
+<rect x="320.0" y="92" width="31.0" height="30" rx="4" fill="#3f7a3f" stroke="#6fcf6f" stroke-width="1.2"/>
+<text x="335.5" y="110.0" text-anchor="middle" font-size="9" fill="#ffffff">k</text>
+<circle cx="343.0" cy="100.0" r="7" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="343.0" y="102.7" text-anchor="middle" font-size="7.5" fill="#1b1b1b" font-weight="bold">13</text>
+<rect x="354.0" y="92" width="31.0" height="30" rx="4" fill="#3f7a3f" stroke="#6fcf6f" stroke-width="1.2"/>
+<text x="369.5" y="110.0" text-anchor="middle" font-size="9" fill="#ffffff">l</text>
+<circle cx="377.0" cy="100.0" r="7" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="377.0" y="102.7" text-anchor="middle" font-size="7.5" fill="#1b1b1b" font-weight="bold">13</text>
+<rect x="388.0" y="92" width="31.0" height="30" rx="4" fill="#3f7a3f" stroke="#6fcf6f" stroke-width="1.2"/>
+<text x="403.5" y="110.0" text-anchor="middle" font-size="9" fill="#ffffff">;</text>
+<circle cx="411.0" cy="100.0" r="7" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="411.0" y="102.7" text-anchor="middle" font-size="7.5" fill="#1b1b1b" font-weight="bold">3</text>
+<rect x="422.0" y="92" width="31.0" height="30" rx="4" fill="#333333" stroke="#555555" stroke-width="1.2"/>
+<text x="437.5" y="110.0" text-anchor="middle" font-size="9" fill="#777777">&#x27;</text>
+<rect x="456.0" y="92" width="48.0" height="30" rx="4" fill="#a03050" stroke="#e07090" stroke-width="1.2"/>
+<text x="480.0" y="110.0" text-anchor="middle" font-size="9" fill="#ffffff">ok</text>
+<circle cx="496.0" cy="100.0" r="7" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="496.0" y="102.7" text-anchor="middle" font-size="7.5" fill="#1b1b1b" font-weight="bold">11</text>
+<rect x="14.0" y="127" width="31.0" height="30" rx="4" fill="#333333" stroke="#555555" stroke-width="1.2"/>
+<text x="29.5" y="145.0" text-anchor="middle" font-size="7.5" fill="#777777">ctrl</text>
+<rect x="48.0" y="127" width="31.0" height="30" rx="4" fill="#333333" stroke="#555555" stroke-width="1.2"/>
+<text x="63.5" y="145.0" text-anchor="middle" font-size="9" fill="#777777">opt</text>
+<rect x="82.0" y="127" width="31.0" height="30" rx="4" fill="#333333" stroke="#555555" stroke-width="1.2"/>
+<text x="97.5" y="145.0" text-anchor="middle" font-size="9" fill="#777777">alt</text>
+<rect x="116.0" y="127" width="31.0" height="30" rx="4" fill="#333333" stroke="#555555" stroke-width="1.2"/>
+<text x="131.5" y="145.0" text-anchor="middle" font-size="9" fill="#777777">z</text>
+<rect x="150.0" y="127" width="31.0" height="30" rx="4" fill="#a03050" stroke="#e07090" stroke-width="1.2"/>
+<text x="165.5" y="145.0" text-anchor="middle" font-size="9" fill="#ffffff">x</text>
+<circle cx="173.0" cy="135.0" r="7" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="173.0" y="137.7" text-anchor="middle" font-size="7.5" fill="#1b1b1b" font-weight="bold">10</text>
+<rect x="184.0" y="127" width="31.0" height="30" rx="4" fill="#a03050" stroke="#e07090" stroke-width="1.2"/>
+<text x="199.5" y="145.0" text-anchor="middle" font-size="9" fill="#ffffff">c</text>
+<circle cx="207.0" cy="135.0" r="7" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="207.0" y="137.7" text-anchor="middle" font-size="7.5" fill="#1b1b1b" font-weight="bold">9</text>
+<rect x="218.0" y="127" width="31.0" height="30" rx="4" fill="#a03050" stroke="#e07090" stroke-width="1.2"/>
+<text x="233.5" y="145.0" text-anchor="middle" font-size="9" fill="#ffffff">v</text>
+<circle cx="241.0" cy="135.0" r="7" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="241.0" y="137.7" text-anchor="middle" font-size="7.5" fill="#1b1b1b" font-weight="bold">7</text>
+<rect x="252.0" y="127" width="31.0" height="30" rx="4" fill="#333333" stroke="#555555" stroke-width="1.2"/>
+<text x="267.5" y="145.0" text-anchor="middle" font-size="9" fill="#777777">b</text>
+<rect x="286.0" y="127" width="31.0" height="30" rx="4" fill="#333333" stroke="#555555" stroke-width="1.2"/>
+<text x="301.5" y="145.0" text-anchor="middle" font-size="9" fill="#777777">n</text>
+<rect x="320.0" y="127" width="31.0" height="30" rx="4" fill="#333333" stroke="#555555" stroke-width="1.2"/>
+<text x="335.5" y="145.0" text-anchor="middle" font-size="9" fill="#777777">m</text>
+<rect x="354.0" y="127" width="31.0" height="30" rx="4" fill="#3f7a3f" stroke="#6fcf6f" stroke-width="1.2"/>
+<text x="369.5" y="145.0" text-anchor="middle" font-size="9" fill="#ffffff">,</text>
+<circle cx="377.0" cy="135.0" r="7" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="377.0" y="137.7" text-anchor="middle" font-size="7.5" fill="#1b1b1b" font-weight="bold">1</text>
+<rect x="388.0" y="127" width="31.0" height="30" rx="4" fill="#3f7a3f" stroke="#6fcf6f" stroke-width="1.2"/>
+<text x="403.5" y="145.0" text-anchor="middle" font-size="9" fill="#ffffff">.</text>
+<circle cx="411.0" cy="135.0" r="7" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="411.0" y="137.7" text-anchor="middle" font-size="7.5" fill="#1b1b1b" font-weight="bold">3</text>
+<rect x="422.0" y="127" width="31.0" height="30" rx="4" fill="#3f7a3f" stroke="#6fcf6f" stroke-width="1.2"/>
+<text x="437.5" y="145.0" text-anchor="middle" font-size="9" fill="#ffffff">/</text>
+<circle cx="445.0" cy="135.0" r="7" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="445.0" y="137.7" text-anchor="middle" font-size="7.5" fill="#1b1b1b" font-weight="bold">2</text>
+<rect x="456.0" y="127" width="99.0" height="30" rx="4" fill="#6a3f8a" stroke="#c090e0" stroke-width="1.2"/>
+<text x="505.5" y="145.0" text-anchor="middle" font-size="7.5" fill="#ffffff">space</text>
+<circle cx="547.0" cy="135.0" r="7" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="547.0" y="137.7" text-anchor="middle" font-size="7.5" fill="#1b1b1b" font-weight="bold">12</text>
+<text x="14" y="164" font-size="9" fill="#aaaaaa">ノートキーは選択中のステップへ音を割り当てます(自動でカーソルが進みます)。</text>
+<text x="14" y="184" font-size="9.5" fill="#8fd6ff" font-weight="bold">凡例 / Legend</text>
+<rect x="14.0" y="181" width="12" height="12" rx="2" fill="#2f5f8f" stroke="#888" stroke-width="1"/>
+<text x="30.0" y="190" font-size="8.5" fill="#dddddd">ノートキー (ステップへ音を割当)</text>
+<rect x="14.0" y="196" width="12" height="12" rx="2" fill="#3f7a3f" stroke="#888" stroke-width="1"/>
+<text x="30.0" y="205" font-size="8.5" fill="#dddddd">移動・調整 (Cursor/Adjust/Volume)</text>
+<rect x="14.0" y="211" width="12" height="12" rx="2" fill="#a03050" stroke="#888" stroke-width="1"/>
+<text x="30.0" y="220" font-size="8.5" fill="#dddddd">編集操作 (Field/Focus/Select/Copy等)</text>
+<rect x="14.0" y="226" width="12" height="12" rx="2" fill="#8a5a1f" stroke="#888" stroke-width="1"/>
+<text x="30.0" y="235" font-size="8.5" fill="#dddddd">切替・特殊 (Clear/Shift/Space/Help)</text>
+<circle cx="20.0" cy="247" r="6" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="20.0" y="249.5" text-anchor="middle" font-size="6.5" fill="#1b1b1b" font-weight="bold">1</text>
+<text x="30.0" y="250" font-size="8.5" fill="#dddddd">ステップカーソル ←</text>
+<circle cx="20.0" cy="262" r="6" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="20.0" y="264.5" text-anchor="middle" font-size="6.5" fill="#1b1b1b" font-weight="bold">2</text>
+<text x="30.0" y="265" font-size="8.5" fill="#dddddd">ステップカーソル →</text>
+<circle cx="20.0" cy="277" r="6" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="20.0" y="279.5" text-anchor="middle" font-size="6.5" fill="#1b1b1b" font-weight="bold">3</text>
+<text x="30.0" y="280" font-size="8.5" fill="#dddddd">;/. : 値の調整</text>
+<circle cx="20.0" cy="292" r="6" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="20.0" y="294.5" text-anchor="middle" font-size="6.5" fill="#1b1b1b" font-weight="bold">4</text>
+<text x="30.0" y="295" font-size="8.5" fill="#dddddd">g: 編集項目サイクル</text>
+<circle cx="20.0" cy="307" r="6" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="20.0" y="309.5" text-anchor="middle" font-size="6.5" fill="#1b1b1b" font-weight="bold">5</text>
+<text x="30.0" y="310" font-size="8.5" fill="#dddddd">f: フォーカス切替(Step⇔Pattern)</text>
+<circle cx="292.0" cy="187" r="6" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="292.0" y="189.5" text-anchor="middle" font-size="6.5" fill="#1b1b1b" font-weight="bold">6</text>
+<text x="302.0" y="190" font-size="8.5" fill="#dddddd">Bksp: クリア / Shift+Bksp: 全消去</text>
+<circle cx="292.0" cy="202" r="6" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="292.0" y="204.5" text-anchor="middle" font-size="6.5" fill="#1b1b1b" font-weight="bold">7</text>
+<text x="302.0" y="205" font-size="8.5" fill="#dddddd">V: 範囲選択 開始/確定/解除</text>
+<circle cx="292.0" cy="217" r="6" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="292.0" y="219.5" text-anchor="middle" font-size="6.5" fill="#1b1b1b" font-weight="bold">8</text>
+<text x="302.0" y="220" font-size="8.5" fill="#dddddd">Aa (Shift): Shift+C/X等に使用</text>
+<circle cx="292.0" cy="232" r="6" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="292.0" y="234.5" text-anchor="middle" font-size="6.5" fill="#1b1b1b" font-weight="bold">9</text>
+<text x="302.0" y="235" font-size="8.5" fill="#dddddd">Shift+C: コピー</text>
+<circle cx="292.0" cy="247" r="6" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="292.0" y="249.5" text-anchor="middle" font-size="6.5" fill="#1b1b1b" font-weight="bold">10</text>
+<text x="302.0" y="250" font-size="8.5" fill="#dddddd">Shift+X: カット</text>
+<circle cx="292.0" cy="262" r="6" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="292.0" y="264.5" text-anchor="middle" font-size="6.5" fill="#1b1b1b" font-weight="bold">11</text>
+<text x="302.0" y="265" font-size="8.5" fill="#dddddd">Enter: ペースト</text>
+<circle cx="292.0" cy="277" r="6" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="292.0" y="279.5" text-anchor="middle" font-size="6.5" fill="#1b1b1b" font-weight="bold">12</text>
+<text x="302.0" y="280" font-size="8.5" fill="#dddddd">Space: 再生/停止</text>
+<circle cx="292.0" cy="292" r="6" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="292.0" y="294.5" text-anchor="middle" font-size="6.5" fill="#1b1b1b" font-weight="bold">13</text>
+<text x="302.0" y="295" font-size="8.5" fill="#dddddd">k/l: 音量 -/+</text>
+<circle cx="292.0" cy="307" r="6" fill="#ffcc33" stroke="#1b1b1b" stroke-width="1"/>
+<text x="292.0" y="309.5" text-anchor="middle" font-size="6.5" fill="#1b1b1b" font-weight="bold">14</text>
+<text x="302.0" y="310" font-size="8.5" fill="#dddddd">ヘルプ表示(長押し)</text>
+<text x="14" y="339" font-size="8" fill="#888888">G0ボタン(短押し): PLAY⇔SEQ切替 ※キーボード上にはありません</text>
+</svg>
