@@ -13,6 +13,20 @@ Thank you so much to everyone who's shown interest in this project!
 
 ---
 
+## 🆕 v0.9 Update
+
+v0.9 opens up a whole new way to enjoy CPS beyond just playing live — building and listening to arrangements.
+
+- **Added a Scale system**: in Pro Mode, choose from 49 scales across 9 categories (Chromatic / Classical / Symmetrical / Pentatonic / Japan / China / India / Middle East / Europe) via a 2-level picker, with live preview while you play
+- **Added an Arpeggiator** (CardputerADV only): hold up to 6 notes as a chord, with UP / DOWN / UP-DOWN / AS PLAYED / RANDOM patterns and adjustable Tempo/Rate/Swing. `V` toggles Latch mode (hold notes without holding keys), `Shift+V` toggles the Arp on/off from any screen
+- **Added a Step Sequencer (SEQ mode)**: a 16-step, TB-303-style sequencer. Beyond pitch and velocity, each step also supports **Tie** (extend the previous note), **Slide** (glide into the next pitch), and **Accent**. `G0` gives you a one-touch toggle between PLAY and SEQ. Steps can be copied, cut, and pasted
+- **Added a Pattern Bank**: save/load your sequences across 8 banks (A–H) × 8 slots each, with a Random Pattern generator too
+- **Added Song mode**: arrange saved patterns into a full song, with independent Transpose and Repeat count per pattern. Access it with a long press of `G0`. A timeline + mini-preview UI makes the arrangement easy to read at a glance
+- **Reverse Tab-cycling**: `Shift+Tab` now cycles the menu backward
+- Major optimization work on display flicker and audio processing, resulting in a noticeably smoother feel overall
+
+---
+
 ## 🆕 v0.8 Update
 
 v0.8 is a major overhaul focused on the IMU.
@@ -52,10 +66,10 @@ v0.7 significantly expanded the sound-editing capabilities.
 | **Sub oscillator** | -1oct / -2oct, adjustable level |
 | **Noise** | Noise blend (adjustable level) |
 | **Keyboard (EZ Mode)** | `1234567890-=` + Backspace mapped to a 13-note diatonic scale (C4-A5); monophonic (last key wins) |
-| **Keyboard (Pro Mode)** | Two physical rows, each a complete chromatic octave including black keys (`1234567890-=`+Backspace = C4-C5, `qwertyuiop[]\` = C3-C4) |
+| **Keyboard (Pro Mode)** | Two physical rows, each a complete chromatic octave including black keys (`1234567890-=`+Backspace = C4-C5, `qwertyuiop[]\` = C3-C4). **49 selectable scales** |
 | **Octave** | `;` / `.` keys shift ±2 octaves (`J`/`N` on original Cardputer) |
 | **Transpose** | `,` / `/` keys shift ±12 semitones (`B`/`M` on original Cardputer) |
-| **Volume** | `k` / `l` keys adjust in 5% steps |
+| **Volume** | `k` / `l` keys adjust in 5% steps (works on almost every screen except Patch Bank) |
 | **Bend** | `Z` key = bend down, `X` key = bend up — guitar-choke feel with asymmetric attack/release |
 | **ADSR** | Full Attack/Decay/Sustain/Release envelope with retrigger support |
 | **Biquad Filter** | LPF / HPF / BPF / Notch / None (bypass); configurable cutoff (100–8000Hz), Q, and key tracking |
@@ -64,10 +78,14 @@ v0.7 significantly expanded the sound-editing capabilities.
 | **Bit-crusher** | Lo-Fi effect: reduces bit depth from 16-bit down to ~3-bit |
 | **Vibrato / Tremolo** | LFO-driven pitch/volume modulation (independent of the general-purpose LFO) |
 | **Portamento** | ON/OFF, adjustable glide speed, with its own dedicated reset |
+| **Arpeggiator** (ADV only) | Up to 6-note chord hold. UP/DOWN/UP-DOWN/AS PLAYED/RANDOM, adjustable Tempo/Rate/Swing, Latch mode |
+| **Step Sequencer (SEQ mode)** | 16-step, TB-303-style. Tie/Slide/Accent per step, with Copy/Cut/Paste |
+| **Pattern Bank** | Save/load sequences across 8 banks x 8 slots, plus Random Pattern generation |
+| **Song mode** | Arrange saved patterns into a song, with independent Transpose/Repeat per entry |
 | **IMU / PAD mapping** | 17 assignable targets; Sensitivity, axis Invert, response Curve, Deadzone, and Calibration adjustable per axis (Deadzone/Calibration unavailable on original Cardputer) |
 | **Patch Bank** | Save/recall every parameter as a named patch. Rename, duplicate, delete, reset, and randomize supported |
-| **Play Mode** | EZ Mode (diatonic) / Pro Mode (chromatic), switchable from the SETTING menu |
-| **SD settings** | Current settings auto-save to `/CPS/settings.json` (when leaving the SETTING screen via Tab) |
+| **Play Mode** | EZ Mode (diatonic) / Pro Mode (chromatic, scale-selectable), switchable from the SETTING menu |
+| **SD settings** | Current settings auto-save to `/CPS/settings.json` |
 
 ### IMU / PAD assignable targets (17)
 
@@ -76,6 +94,7 @@ v0.7 significantly expanded the sound-editing capabilities.
 - **PITCH_BEND** — bipolar: tilt direction (or PAD press direction) controls bend direction
 - **BEND_UP / BEND_DOWN** — absolute: always raises / lowers pitch
 - **VOLUME** — a relative multiplier (0-100%) of the current volume; can only attenuate, never exceeds the set level
+- **ArpTempo / ArpSwing** — controls the Arpeggiator's Tempo/Swing while PLAY is active, or the Sequencer's own Tempo/Swing while SEQ is active — the same axis assignment automatically applies to whichever is relevant
 
 ---
 
@@ -105,7 +124,7 @@ No compiling required — the quickest way to get CPS on your device.
 4. Select the correct COM port and click "Burn"
 5. Once flashing completes, CPS will launch automatically
 
-> Inserting a FAT32-formatted SD card lets you use auto-save and the Patch Bank feature.
+> Inserting a FAT32-formatted SD card lets you use auto-save and the Patch Bank / Pattern Bank / Song features.
 
 ---
 
@@ -113,13 +132,22 @@ No compiling required — the quickest way to get CPS on your device.
 
 If your CardputerADV runs **Launcher FW**, you can install CPS without building anything yourself.
 
-1. Go to the [Releases](../../releases) page and download the latest `C.P.S.v0.8t.bin` file
+#### Option 2a — Using OTA (recommended, easiest)
+
+1. Boot into Launcher FW on your CardputerADV
+2. Search for "C.P.S." (CardPuter Synth) via the OTA feature
+3. Select the firmware that appears and download/install it
+4. CPS will launch automatically once installed
+
+#### Option 2b — Manually copying to the SD card
+
+1. Go to the [Releases](../../releases) page and download the latest `.bin` file
 2. Copy the `.bin` file to the **root of your SD card** (not inside a subfolder)
 3. Insert the SD card into your CardputerADV and boot into Launcher FW
 4. Navigate to the `.bin` file in the Launcher file browser and select it to flash
 5. CPS will launch automatically after flashing
 
-> A FAT32-formatted micro-SD card is required both for the Launcher install and for CPS's settings persistence.
+> A FAT32-formatted micro-SD card is required both for a Launcher install via Option 2b and for CPS's settings persistence.
 
 ---
 
@@ -148,15 +176,26 @@ After a successful build, two files are generated in `.pio/build/cps/`:
 
 ### First boot (all install methods)
 
-On first boot the app creates `/CPS/` on the SD card (FAT32 micro-SD required).
-Settings are saved to `/CPS/settings.json` automatically whenever you leave the SETTING screen (Tab key).
+On first boot the app creates `/CPS/` on the SD card (along with the `Patch` / `Pattern` / `Song` subfolders) — a FAT32 micro-SD is required.
+Settings save to `/CPS/settings.json` automatically whenever you leave the SEQ or SETTING screen.
 If no SD card is present the app still runs with default settings.
 
 ---
 
 ## Controls
 
-### MAIN screen
+### Mode-switching quick reference
+
+| Action | Result |
+|---|---|
+| `Tab` | Cycle menus forward (PLAY/SEQ → VCO → VCF → VCA → LFO → SETTING → PLAY/SEQ) |
+| `Shift+Tab` | Cycle menus backward |
+| `G0` (short press) | Toggle PLAY mode ⇔ SEQ mode |
+| `G0` (long press, ~0.5s) | Enter Song mode (long press again to return) |
+
+### PLAY screen
+
+![PLAY mode keymap](images/play_keymap_en.svg)
 
 | Key | Action |
 |---|---|
@@ -170,11 +209,13 @@ If no SD card is present the app still runs with default settings.
 | `A` | Toggle IMU/PAD X-axis hold ON/OFF |
 | `S` | Toggle IMU/PAD Y-axis hold ON/OFF |
 | `D` | Toggle note hold ON/OFF |
+| `V` | Toggle Arp Latch ON/OFF (ADV only) |
+| `Shift+V` | Toggle the Arpeggiator ON/OFF (ADV only, works from any screen) |
+| `Space` | Play/Stop the Sequencer's pattern (works even outside the SEQ screen) |
 | `H` (hold) | Show help overlay |
 | Tilt device (ADV) / `;`/`.`/`,`/`/` for PAD (original) | Controls whichever parameters are assigned to the IMU/PAD X/Y axes |
-| `Tab` | Switch to the VCO screen |
 
-The MAIN screen shows the current note name/frequency, octave/transpose/portamento/note-hold state, a bend meter, IMU/PAD status, and the IMU/PAD X/Y target names with their current values — appending **(HOLD)** whenever that axis is held.
+The PLAY screen shows the current note name/frequency, octave/transpose/portamento/note-hold state, a bend meter, IMU/PAD status, and the IMU/PAD X/Y target names with their current values — appending **(HOLD)** whenever that axis is held. While the Arpeggiator is on, every held note is listed instead.
 
 ### VCO screen
 
@@ -184,7 +225,6 @@ Left column: Timbre · PWM · Detune · FineTune　　Right column: Sub Lvl · S
 |---|---|
 | `;` / `.` | Select previous / next item |
 | `,` / `/` | Decrease / increase value |
-| `Tab` | Switch to the VCF screen |
 
 ### VCF screen
 
@@ -194,9 +234,10 @@ Left column: Filter (type) · Cutoff · Resonance · KeyTrack　　Right column:
 |---|---|
 | `;` / `.` | Select previous / next item |
 | `,` / `/` | Decrease / increase value |
-| `Tab` | Switch to the VCA screen |
 
 Filter type can be set to LPF / HPF / BPF / Notch / None (bypass).
+
+> **To hear the Notch filter clearly**: pick a harmonically rich waveform (Saw/Square rather than Sine), set Cutoff to roughly 600–1500Hz and Resonance fairly high, then hold a sustained note while slowly sweeping Cutoff up and down.
 
 ### VCA screen (ADSR)
 
@@ -206,7 +247,6 @@ Attack · Decay · Sustain · Release
 |---|---|
 | `;` / `.` | Select previous / next item |
 | `,` / `/` | Decrease / increase value |
-| `Tab` | Switch to the LFO screen |
 
 ### LFO screen
 
@@ -216,23 +256,51 @@ Wave · Rate (0.1–20 Hz) · Depth (0–100%) · Target (modulation destination
 |---|---|
 | `;` / `.` | Select previous / next item |
 | `,` / `/` | Decrease / increase value |
-| `Tab` | Switch to the SETTING screen |
 
 The top of the screen shows the LFO waveform along with a live marker tracking its current phase.
 
+### SEQ screen (Step Sequencer)
+
+Toggle here from PLAY with a quick tap of `G0`. A 16-step, TB-303-style sequencer where each step can carry a pitch/velocity plus Tie (extend the previous note), Slide, and Accent.
+
+![SEQ mode keymap](images/seq_keymap_en.svg)
+
+| Key | Action |
+|---|---|
+| Note keys | Assign a pitch to the selected step (plays a preview and auto-advances to the next step) |
+| `,` / `/` | Move the step cursor |
+| `f` | Toggle edit focus (Step editing ⇔ Pattern settings) |
+| `g` | Cycle the edit field (Step focus: Velocity→Tie→Slide→Accent / Pattern focus: Tempo→Swing) |
+| `;` / `.` | Adjust the selected field (numeric fields increase/decrease; Tie/Slide/Accent toggle) |
+| `Backspace` | Clear the selected step |
+| `Shift+Backspace` | Clear all 16 steps |
+| `V` | Mark / confirm / clear a step-range selection |
+| `Shift+C` | Copy the selection |
+| `Shift+X` | Cut the selection |
+| `Enter` | Paste at the cursor |
+| `Space` | Play/Stop the pattern |
+| `k` / `l` | Volume down / up |
+| `H` (hold) | Show help overlay |
+
+On the step grid, velocity is shown as bar height, and a run of Tie-connected steps merges into one shape with a thick outline. Accented steps turn red.
+
 ### SETTING screen
 
-Five entry points: Patch / IMU (PAD on original) / Bend / Portamento / Play Mode.
+Entry points: Patch / Pattern / IMU (PAD on original) / Bend / Portamento / Play Mode / Arp (ADV only). **Patch/IMU/Bend/Portamento show up from either PLAY or SEQ; Pattern only shows up when SEQ is the active home mode, and Arp only when PLAY is.**
 
 | Key | Action |
 |---|---|
 | `;` / `.` | Select previous / next item |
 | `,` / `/` | Open the selected category |
-| `Tab` | Save settings and return to the MAIN screen |
+| `Tab` | Save settings and return to the PLAY/SEQ screen |
 
 #### Patch sub-menu
 
 Save · Load · Reset (tone reset) · Random (tone randomize). Both Reset and Random are behind a confirmation dialog.
+
+#### Pattern sub-menu
+
+Save · Load · Random (pattern randomize). Random draws from the currently active scale and includes Tie/Slide/Accent, not just pitch/velocity.
 
 #### IMU / PAD sub-menu
 
@@ -250,7 +318,11 @@ ON/OFF · speed · Reset.
 
 #### Play Mode sub-menu
 
-Toggle between EZ Mode and Pro Mode.
+Toggle between EZ Mode and Pro Mode; when in Pro Mode, also select a scale (49 scales across 9 categories).
+
+#### Arp sub-menu (ADV only)
+
+Type (UP/DOWN/UP-DOWN/AS PLAYED/RANDOM) · Tempo · Rate · Swing. The On/Off toggle itself lives on `Shift+V` (works from any screen) rather than in this menu.
 
 ### Patch Bank screen
 
@@ -267,6 +339,42 @@ Opened from the Patch sub-menu's Save or Load item.
 
 In Save mode, a `<New Patch>` entry appears at the top of the list for creating a new patch. Patches are only ever saved inside `/CPS/Patch/` — the app cannot navigate to any other folder.
 
+### Pattern Bank screen
+
+Opened from the Pattern sub-menu's Save or Load item. Choose from a grid of 8 banks (A–H) × 8 slots (1–8).
+
+| Key | Action |
+|---|---|
+| `;` / `.` / `,` / `/` | Move around the bank/slot grid |
+| `Enter` | Confirm (Load / new Save / confirm overwrite) |
+| `Backspace` | Clear the selected slot (with confirmation) |
+| `Tab` | Go back one level |
+
+Patterns are saved under `/CPS/Pattern/` with a filename combining the bank letter and slot number (e.g. `A1.json`).
+
+### Song mode screen
+
+Enter with a long press of `G0`. Arrange saved patterns into a full song and play them back.
+
+![SONG mode keymap](images/song_keymap_en.svg)
+
+| Key | Action |
+|---|---|
+| `,` / `/` | Move the entry cursor |
+| `f` | Toggle edit focus (Entry editing ⇔ Song-level settings) |
+| `g` | Cycle the edit field (Entry focus: Bank→Slot→Transpose→Repeat / Song focus: Tempo→Swing) |
+| `;` / `.` | Adjust the selected field |
+| `Enter` | Insert a new entry right after the cursor |
+| `Backspace` | Delete the selected entry |
+| `I` | Toggle whether each entry inherits its own pattern's Tempo/Swing |
+| `O` | Toggle whether the song loops back to the start after the last entry |
+| `Space` | Play/Stop the song |
+| `Shift+S` / `Shift+L` | Save / Load the song |
+| `k` / `l` | Volume down / up |
+| `Tab` | Return to whichever of PLAY/SEQ was active |
+
+Entries appear as a horizontal timeline of blocks color-coded by bank letter (the bar beneath each block shows its Repeat count), with a small preview grid showing the shape of whichever pattern is playing (or selected, while stopped). Transpose is chromatic (semitone-based) and independent per entry. Songs save under `/CPS/Song/` by number (1–8).
+
 ---
 
 ## Differences on the original Cardputer
@@ -276,7 +384,8 @@ Auto-detected at boot; the following differ from CardputerADV:
 - **PAD control instead of IMU**: `;`/`.` move a virtual Y axis, `,`/`/` move a virtual X axis. Moves toward the extreme while held, springs back to center on release (toggle Hold with `A`/`S` to keep it from springing back)
 - **Octave/Transpose keys move**: since PAD control needs those keys, Octave is on `J`/`N` and Transpose is on `B`/`M` instead
 - **Deadzone and Calibrate are hidden**: neither concept applies to a key-driven PAD (no sensor noise to filter, no physical zero-point to correct)
-- **Arpeggiator will not be supported** (planned for a future version): it needs multi-key chord holding, which the original's 3-key rollover limit can't reliably support
+- **Arpeggiator is not supported**: it needs multi-key chord holding, which the original's 3-key rollover limit can't reliably support
+- **Step Sequencer, Pattern Bank, and Song mode all work on both boards**: entering one note per step doesn't need key rollover, so these aren't affected by the 3-key limit
 - **3-key rollover limit**: due to hardware constraints, pressing a 4th key at the same time may cause key ghosting
 
 ---
@@ -308,7 +417,7 @@ ADSR Envelope
 Speaker (I2S)
 ```
 
-Pitch modulation (vibrato LFO + IMU(PAD) bend + key bend + General LFO (Pitch)) is applied to the oscillator phase increment before sample generation.
+Pitch modulation (vibrato LFO + IMU(PAD) bend + key bend + General LFO (Pitch)) is applied to the oscillator phase increment before sample generation. In SEQ/Song mode, this same path is driven by the Sequencer's own timing engine.
 
 ---
 
@@ -343,8 +452,7 @@ Managed automatically by PlatformIO:
 - Monophonic only (last note wins); polyphony is not planned
 - Original Cardputer support hasn't been verified on real hardware by the developer yet (bug reports/feedback welcome)
 - Display is 240×135 px; layout is tight
-- v0.9: Arpeggiator, Sand reverse Tab-cycling
-- v1.0: A ring modulator, and an additional filter stage
+- v1.0: still under consideration
 
 ---
 
