@@ -613,5 +613,12 @@ Managed automatically by PlatformIO:
 
 ## License
 
-MIT — feel free to use, modify, and share.
-If you build something cool with CPS, consider sharing it with the community!
+**CC BY-NC-SA 4.0** (Attribution - NonCommercial - ShareAlike)
+
+- **Attribution (BY)**: please credit the project when you use it
+- **NonCommercial (NC)**: commercial use is not permitted
+- **ShareAlike (SA)**: if you publish a modified or derivative version, it must be released under the same CC BY-NC-SA 4.0 license
+
+See [https://creativecommons.org/licenses/by-nc-sa/4.0/](https://creativecommons.org/licenses/by-nc-sa/4.0/) for the full terms.
+
+Feel free to use, modify, and share (non-commercial use only). If you build something cool with CPS, consider sharing it with the community!
